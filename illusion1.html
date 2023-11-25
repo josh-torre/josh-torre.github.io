@@ -1,26 +1,40 @@
 <!DOCTYPE html>
 <style>
-.illusion1{
-  height: 100px;
-  width: 100px;
-  outline: black;
-  background-color: bisque;
-  overflow: hidden;
-}
-#ball{
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  background-color: black;
-  position: relative;
-  top: -10px;
-  left: 30px;
-}
+  .illusion1{
+    height: 450px;
+    width: 450px;
+    background-color: #C2D9FF;
+    overflow: hidden;
+    margin-top: 10px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    outline:solid;
+    outline-width: 2px;
+    outline-color: #2a1e68;
+  }
+  .child{
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    top: -10%;
+    left: -10%;
+  }
 </style>
 
 <html>
-    <body>
-      <h1>Welcome to Illusion 1!</h1>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+    <body class="background">
+      <div class="topnav" >
+        <a href="index.html">Home</a>
+        <a class="active" href="illusion1.html">Illusions</a>
+        <a href="#about">About</a>
+      </div>
+      <h1>Illusion 1</h1>
       <div class="illusion1" id="illusion1">
         <div class="child" id="ball"></div>
       </div>
