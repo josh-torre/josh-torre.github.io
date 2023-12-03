@@ -3,9 +3,7 @@
 let mouseX;
 let mouseY;
 
-const el = document.getElementById('illusion1')
-
-//giveDivTexture( document.getElementsByClassName('texture'), 20)
+  const el = document.getElementById('outer-shell');
 
   function updateBallPosition(){
     var ball = document.getElementById("ball");
@@ -15,7 +13,7 @@ const el = document.getElementById('illusion1')
 
     console.log(ballAttributes.width + " " + ballAttributes.height)
 
-    ball.style.top = (mouseY - (ballHeight/2)) + "px";
+    ball.style.top = ((mouseY - (ballHeight/2)) -450)+ "px";
     ball.style.left = (mouseX - (ballWidth/2)) + "px";
   }
 
@@ -33,38 +31,43 @@ const el = document.getElementById('illusion1')
       updateBallPosition();
   }
 
-  function giveDivTexture(div, sizeOfSquares){
-
-    const sizeOfDiv = getComputedStyle(div).width.substring(0, getComputedStyle(div).width.indexOf("p"));
-    const numberOfSquares = Math.floor(sizeOfDiv/sizeOfSquares);
-    
-    for(var r = 0; r < numberOfSquares; r++){
-      for(var c = 0; c < numberOfSquares; c++){
-        var object = document.createElement('div');
-
-        object.style.width = sizeOfSquares + "px";
-        object.style.height = sizeOfSquares + "px";
-        object.style.top = (sizeOfSquares * r) + "px";
-        object.style.left = (sizeOfSquares * c) + "px";
-        
-        const shadeOfGrey = Math.floor(Math.random() * 255)
-        object.style.backgroundColor ='rgb(' + shadeOfGrey + ',' + shadeOfGrey + ',' + shadeOfGrey + ')';;
-      }
+  function getColorArray(canvasArray){
+    for(i = 0; i < canvasArray.data.length; i+=4){
+      const colorScalar = Math.round(Math.random());
+      canvasArray.data[i] = colorScalar * 255;  // red   color
+      canvasArray.data[i + 1] = colorScalar * 255;  // green color
+      canvasArray.data[i + 2] = colorScalar * 255;  // blue  color
+      canvasArray.data[i + 3] = 255/2;
     }
   }
+  function makeCanvasBackground(id){
+    var canvas = document.getElementById(id);
+    var context = canvas.getContext("2d");
 
-function giveTexture(object, size){
-  var i = 10, 
-  fragment = document.createDocumentFragment(), 
-  div = document.createElement('div');
+    var canvasArray = context.createImageData(300, 300);
 
-  while (i--) {
-    fragment.appendChild(div.cloneNode(true));
+    for(i = 0; i < canvasArray.data.length; i+=4){
+      const randomChance = Math.random();
+      var colorScalar = 0;
+      if(randomChance <= 0.2)
+        colorScalar = 0
+      else
+        colorScalar = 1
+
+      canvasArray.data[i] = colorScalar * 255;  // red   color
+      canvasArray.data[i + 1] = colorScalar * 255;  // green color
+      canvasArray.data[i + 2] = colorScalar * 255;  // blue  color
+      if(colorScalar == 1)
+      canvasArray.data[i + 3] = 0;
+      else
+      canvasArray.data[i + 3] =255;
+    }
+    //canvasArray.height = 100;
+    //canvasArray.width = 100;
+    context.putImageData(canvasArray, 0, 0);
   }
 
-  $('#backdrop').append(fragment);
-}
-
-
-  // Attach mousemove event listener to track mouse movements
-el.addEventListener("mousemove", updateMouseCoordinates);
+    // Attach mousemove event listener to track mouse movements
+    el.addEventListener("mousemove", updateMouseCoordinates);
+    makeCanvasBackground("illusion1-canvas");
+    makeCanvasBackground("illusion1-canvas-ball");

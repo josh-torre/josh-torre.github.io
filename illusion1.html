@@ -1,24 +1,26 @@
 <!DOCTYPE html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <style>
   .illusion1{
     height: 450px;
     width: 450px;
-    background-color: #C2D9FF;
+    background-color:transparent;
     overflow: hidden;
-    margin-top: 10px;
     align-items: center;
     margin-left: auto;
     margin-right: auto;
     outline:solid;
     outline-width: 2px;
     outline-color: #2a1e68;
+    position: relative;
   }
   
   .child{
+    overflow: hidden;
+    background-color: #C2D9FF;
     height: 10%;
     width: 10%;
     border-radius: 50%;
-    background-color: black;
     position: relative;
     top: -10%;
     left: -10%;
@@ -36,8 +38,12 @@
         <a href="#about">About</a>
       </div>
       <h1>Illusion 1</h1>
-      <div class="illusion1" id="illusion1">
-        <div class="child" id="ball"></div>
+      <div class="illusion1" id="outer-shell">
+        <canvas class="illusion1" id="illusion1-canvas" style="background-color: transparent;width: 450px;height: 450px;"> </canvas>
+          <div class="child" id="ball">
+            <canvas class="illusion1" id="illusion1-canvas-ball" style="width: 450px;height: 450px;"> </canvas>
+          </div>
+        </div>
       </div>
       <script src="illusion.js"></script>
     </body>
