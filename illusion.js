@@ -11,8 +11,6 @@ let mouseY;
     var ballWidth = Number.parseInt(ballAttributes.width.substring(0, ballAttributes.width.indexOf("p")));
     var ballHeight  = Number.parseInt(ballAttributes.height.substring(0, ballAttributes.height.indexOf("p")));
 
-    console.log(ballAttributes.width + " " + ballAttributes.height)
-
     ball.style.top = ((mouseY - (ballHeight/2)) -450)+ "px";
     ball.style.left = (mouseX - (ballWidth/2)) + "px";
   }
@@ -62,8 +60,10 @@ let mouseY;
       else
       canvasArray.data[i + 3] =255;
     }
-    //canvasArray.height = 100;
-    //canvasArray.width = 100;
+    canvas.style.width = "450 px";
+    canvas.style.height = "450 px";
+    canvasArray.height = 20;
+    canvasArray.width = 20;
     context.putImageData(canvasArray, 0, 0);
   }
 
