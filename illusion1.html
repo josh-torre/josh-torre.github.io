@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <style>
-  .illusion1{
+  .illusion{
     height: 450px;
     width: 450px;
     background-color:transparent;
@@ -10,7 +10,6 @@
     margin-right: auto;
     outline:solid;
     outline-width: 2px;
-    outline-color: #2a1e68;
     position: relative;
     cursor: none;
   }
@@ -38,15 +37,25 @@
         <a href="#about">About</a>
       </div>
       <h1>Illusion 1</h1>
-      <div class="illusion1" id="outer-shell">
-        <canvas class="illusion1" id="illusion1-canvas" style="background-color: transparent;width: 450px;height: 450px;"> </canvas>
-          <div class="child" id="ball">
-            <canvas class="illusion1" id="illusion1-canvas-ball" style="width: 450px;height: 450px;"> </canvas>
+      <div class="illusion" id="illusion1-outer-shell">
+        <canvas class="illusion" id="illusion1-canvas" style="background-color: transparent;width: 450px;height: 450px;"> </canvas>
+          <div class="child" id="ball-il1">
+            <canvas class="illusion" id="illusion1-canvas-ball" style="width: 450px;height: 450px;"> </canvas>
           </div>
         </div>
       </div>
-      <script src="illusion.js"></script>
+      <p class="background" style="margin-bottom: 5%;"><br>Please note that your viewing distance to the screen may impact the illusion.<br>
+        If you are able to view the edges while the ball is still, <strong>please back away from the screen</strong> </p>
+      <h1>Illusion 2</h1>
+      <div class="illusion" id="illusion2-outer-shell">
+        <canvas class="illusion" id="illusion2-canvas" style="background-color: transparent;width: 450px;height: 450px;"> </canvas>
+          <div class="child" id="ball-il2">
+            <canvas class="illusion" id="illusion2-canvas-ball" style="width: 450px;height: 450px;"> </canvas>
+          </div>
+        </div>
+      </div>
       <p class="background"><br>Please note that your viewing distance to the screen may impact the illusion.<br>
-                            If you are able to view the edges while the ball is still, <strong>please back away from the screen</strong> </p>
+        If you are able to view the edges while the ball is still, <strong>please back away from the screen</strong> </p>
+      <script src="illusion.js"></script>
     </body>
 </html>
