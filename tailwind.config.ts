@@ -13,6 +13,27 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        changeButtonText: {
+          '0%': {color: '#FFFFFF'},
+          '100%': {color: '#ff8626'}
+        },
+        blinkingCarrot: {
+          '0%': {'border-color': '#FFFFFF'},
+          '100%': {'border-transparency': 'transparent'},
+        }
+      },
+      animation:{
+        focused: "changeButtonText 0.25s forwards",
+        blinking: "blinkingCarrot 0.75s infinite",
+      },
+      colors: {
+        'my-white': '#FFFFFF',
+        'my-dark-blue': '#04253A',
+        'my-tan': '#FFDDBF',
+        'my-teal': '#4C837A',
+        'my-lighter-teal': '#6ac5b6'
+      }
     },
   },
   plugins: [],
