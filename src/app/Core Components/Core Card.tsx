@@ -1,7 +1,7 @@
 type CardData = {
     title: string;
     subHeading: string;
-    bodyText: string;
+    bodyText: JSX.Element;
     optionalJSX: JSX.Element | undefined;
 };
 
@@ -15,7 +15,7 @@ export function MakeCard({title, subHeading, bodyText, optionalJSX}: CardData) :
                 <div className="p-6">
                     <p className="font-bold text-my-white text-2xl pb-2">{title}</p>
                     <p className='text-xl font-bold text-my-teal pb-2'>{subHeading}</p>
-                    <p className="text-l text-my-white">{bodyText}</p>
+                    {bodyText}
                 </div>
                 <div className={"p-6 flex-col-1 m-auto " + sideContentSize}>
                     {optionalJSX}

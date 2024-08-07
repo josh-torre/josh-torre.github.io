@@ -59,7 +59,7 @@ const AboutMeText: JSX.Element =
                 <p className=""> Hi! I’m a
                     Computer Science student at Northeastern University.
                     Besides a student, I am also . When I am not working, you can find me at the Huntington Ave <a href="https://locations.dunkindonuts.com/en/ma/boston/360-huntington-ave/341489?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=341489&y_source=1_MTIxMTEzMTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" target="_blank"
-                                                                                                                     className="text-orange-500 font-bold">Dunkin'</a> or meeting my friends
+                                                                                                                     className="text-orange-500 font-bold">Dunkin&apos;</a> or meeting my friends
                     for some late night Mamacitas.</p>
                 <p className="pt-6">As a professional, <strong className="font-bold text-my-lighter-teal">I am a results-driven software engineer with a background in successful
                     corporate implementations</strong>. As I progress through my career, I am always looking for new opportunities to

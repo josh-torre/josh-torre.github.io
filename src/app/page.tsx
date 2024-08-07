@@ -5,24 +5,23 @@ import githubIcon from '../../public/Github.svg'
 import linkedinIcon from '../../public/Linkedin Icon.svg'
 import TypingEffect from './TitlesAnimation'
 import {MyButton} from './Core Components/ButtonComponent'
-import { Inter } from 'next/font/google/'
 import "./globals.css";
 import React from "react";
 import {ClickableIcons} from "@/app/ClickableIcons";
-import { AppProps } from 'next/app'
 
+import { Inter } from 'next/font/google'
 
-const inter = Inter
-console.log(inter[Symbol.hasInstance]);
+// If loading a variable font, you don't need to specify the font weight
+const inter = Inter({ subsets: ['latin'] })
 
 function TitleCard() : JSX.Element {
     return (
         <>
-            <div className="text-my-white font-inter">
-                <h1 className="text-8xl font-bold">
+            <div className="font-inter w-fit">
+                <h1 className="text-6xl xl:text-8xl font-black lg:text-nowrap">
                     Joshua Torre
                 </h1>
-                <div className="text-5xl text-my-teal text-nowrap font-light min-h-[48px]">
+                <div className="text-4xl xl:text-5xl text-my-teal text-nowrap font-light min-h-[48px]">
                 <TypingEffect/>
                 </div>
             </div>
@@ -72,14 +71,14 @@ function LeftSideOfHome(): JSX.Element {
 function RightSideOfHome(): JSX.Element {
     return (
         <div className="w-full sm:w-3/4 place-content-center">
-            <AddPortrait/>
+            <Portrait/>
             <BottomLinks/>
         </div>
     )
 
 }
 
-function AddPortrait() {
+function Portrait() {
     return (
         <div className="p-2 grid justify-items-center self-end">
             <Image
