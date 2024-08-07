@@ -1,4 +1,3 @@
-import linkedinIcon from '../../../public/Linkedin Icon.svg'
 import {NavBar} from "@/app/Core Components/Navigation Bar";
 import {MakeCard} from "@/app/Core Components/Core Card"
 

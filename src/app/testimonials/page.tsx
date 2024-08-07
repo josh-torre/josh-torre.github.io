@@ -8,10 +8,11 @@ import Josh_Img from "../../../public/Testimonials-Images/Josh-Learned.jpeg"
 export default function Root(){
     const defaultQuoteStying = "text-xl text-white font-light";
     return (
+
         <div className="bg-my-dark-blue h-full p-6 pb-4 m-auto">
             {TitleCard}
             <div className="flex flex-col m-auto justify-items-center w-fit sm:flex-row">
-                <TestimonialCard name={"Kevin Gibbs"}
+                 <TestimonialCard name={"Kevin Gibbs"}
                                  image={Kevin_Img}
                                  quote={<p className={defaultQuoteStying}>&quot;He possess a rare ability to
                                      <strong className="font-extrabold text-my-lighter-teal"> communicate intricate ideas with
@@ -27,12 +28,12 @@ export default function Root(){
                                      <strong className="font-extrabold text-my-lighter-teal"> multi-faceted and
                                          versatile skill set.</strong>&quot;</p>}/>
 
-                <TestimonialCard name={"Marco Spaeth"}
+                {/*<TestimonialCard name={"Marco Spaeth"}
                                  image={Marco_Img}
                                  quote={<p className={defaultQuoteStying}>&quot;He went <strong className="font-extrabold text-my-lighter-teal">
                                      above and beyond </strong>to successfully
                                      develop a more capable tool than
-                                     even his supervisor expected to be possible&quot;</p>}/>
+                                     even his supervisor expected to be possible&quot;</p>}/>*/}
             </div>
         </div>
     );

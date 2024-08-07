@@ -5,16 +5,21 @@ import githubIcon from '../../public/Github.svg'
 import linkedinIcon from '../../public/Linkedin Icon.svg'
 import TypingEffect from './TitlesAnimation'
 import {MyButton} from './Core Components/ButtonComponent'
-
+import { Inter } from 'next/font/google/'
 import "./globals.css";
 import React from "react";
 import {ClickableIcons} from "@/app/ClickableIcons";
+import { AppProps } from 'next/app'
 
- function TitleCard() : JSX.Element {
+
+const inter = Inter
+console.log(inter[Symbol.hasInstance]);
+
+function TitleCard() : JSX.Element {
     return (
         <>
             <div className="text-my-white font-inter">
-                <h1 className="text-8xl font-black">
+                <h1 className="text-8xl font-bold">
                     Joshua Torre
                 </h1>
                 <div className="text-5xl text-my-teal text-nowrap font-light min-h-[48px]">

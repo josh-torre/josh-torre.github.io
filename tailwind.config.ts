@@ -13,19 +13,8 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      keyframes: {
-        changeButtonText: {
-          '0%': {color: '#FFFFFF'},
-          '100%': {color: '#ff8626'}
-        },
-        blinkingCarrot: {
-          '0%': {'border-color': '#FFFFFF'},
-          '100%': {'border-transparency': 'transparent'},
-        }
-      },
-      animation:{
-        focused: "changeButtonText 0.25s forwards",
-        blinking: "blinkingCarrot 0.75s infinite",
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
       },
       colors: {
         'my-white': '#FFFFFF',
