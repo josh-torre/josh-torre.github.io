@@ -8,7 +8,7 @@ import Josh_Img from "../../../public/Testimonials-Images/Josh-Learned.jpeg"
 export default function Root(){
     const defaultQuoteStying = "text-xl font-light";
     return (
-        <div className="bg-my-dark-blue h-full p-6 pb-4 m-auto">
+        <div className="bg-my-dark-blue h-full min-h-screen p-6 pb-4 m-auto">
             {TitleCard}
             <div className="flex flex-col m-auto justify-items-center w-fit sm:flex-row">
                  <TestimonialCard name={"Kevin Gibbs"}
