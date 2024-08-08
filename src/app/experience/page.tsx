@@ -36,20 +36,22 @@ function MakeCardWithList({title, subHeading, bodyText, picture, listedValue}: C
             <Image
             alt={"altText"}
             src={picture}
-            className="border-5 border-my-tan rounded-xl"/>
+            className="border-5 border-my-tan rounded-xl aspect-square max-h-[250px] max-w-[350px]"/>
         </div>);
 
     return (
         <div className="p-3">
             <div
-                className="w-full h-fit bg-black bg-opacity-30 rounded-2xl flex-col-1 sm:flex sm:flex-col-2">
-                <div className="p-6">
+                className="w-full h-fit bg-black bg-opacity-30 rounded-2xl sm:flex sm:flex-col-2">
+                <div className="p-6 justify-start">
                     <p className="font-bold text-2xl pb-2">{title}</p>
                     <p className='text-xl font-bold text-my-teal pb-2'>{subHeading}</p>
                     <p className="text-l">{bodyText}</p>
                     <ul className="list-disc text-l p-4">{listedBullets}</ul>
                 </div>
-                {optionalImage}
+                <div className="flex flex-col items-center w-fit">
+                    {optionalImage}
+                </div>
             </div>
         </div>
     );
