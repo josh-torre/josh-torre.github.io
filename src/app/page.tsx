@@ -29,15 +29,17 @@ function TitleCard() : JSX.Element {
     )
  }
 
+
 function BottomLinks(): JSX.Element {
     return (
         <div className="w-full flex justify-center">
                 <div className="grid grid-cols-3 gap-4">
                     <ClickableIcons
-                        href={"mailto:torre.jo@northeastern.edu"}
+                        href={""}
                         altText={"Mail Icon. Click to send me an email!"}
-                        newWindow={true}
-                        img={mailIcon}/>
+                        newWindow={false}
+                        img={mailIcon}
+                        shouldAlert={true}/>
                     <ClickableIcons
                         href={"https://www.linkedin.com/in/joshua-torre/"}
                         altText={"Linkedin Logo"}
