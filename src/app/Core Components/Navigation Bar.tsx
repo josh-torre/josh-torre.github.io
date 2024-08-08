@@ -5,9 +5,9 @@ import {usePathname} from "next/navigation";
 
 export const NavBar : JSX.Element =
     (<div className="p-3 pt-1">
-            <div className="bg-black bg-opacity-50 h-fit w-[90%] rounded-2xl flex float-right">
+            <div className="bg-black bg-opacity-50 h-fit w-fit rounded-2xl flex float-right">
                 <nav>
-                    <ul className="flex w-full text-white select-none place-content-center flex-wrap">
+                    <ul className="flex w-full select-none place-content-center flex-wrap">
                         <NavBarLocation name={"Home"} href={"/"}/>
                         <NavBarLocation name={"Projects"} href={"/projects"}/>
                         <NavBarLocation name={"Experience"} href={"/experience"} />

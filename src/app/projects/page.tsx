@@ -7,9 +7,9 @@ import {MyButton} from "@/app/Core Components/ButtonComponent";
 
 const TitleCard : JSX.Element =
      (
-        <div className="w-full flex flex-col sm:flex-row m-auto">
+        <div className="w-full flex flex-col sm:flex-row m-auto p-3">
             <div>
-                <p className="text-7xl font-black text-my-white pb-2">Projects</p>
+                <p className="text-7xl font-black pb-2">Projects</p>
             </div>
             <div className="w-full m-auto">
                 {NavBar}
@@ -62,9 +62,7 @@ export default function Root() {
                              The maze can then be solved using Breath First Search (BFS), Depth First Search (DFS), and the A*
                              algorithm using the Manhattan distance heuristic. The program also supports both hexagonal and
                             square mazes, allowing for an extra layer of complexity for users who want a challenge.</p>}
-                        optionalJSX={<MyButton text={"Try It!"}
-                                               link={"/projects/Project-Code/Maze-Project/_disabled_"}
-                                               newWindow={true}/>}
+                        optionalJSX={undefined}
                     />
                     <MakeCard
                         title={"Image Compression - Seam Removal*"}
@@ -76,7 +74,7 @@ export default function Root() {
                         optionalJSX={undefined}
                     />
                 </div>
-                <p className="text-my-tan font-bold text-xl p-2 place-content-center float-right">
+                <p className="text-my-tan font-bold text-xl p-4 place-content-center float-right">
                     All code available upon request. All projects marked with a (*) are class projects</p>
             </div>
         </>

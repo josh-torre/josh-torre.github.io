@@ -55,7 +55,7 @@ function RightSideOfHome(): JSX.Element {
 const AboutMeText: JSX.Element =
     (
         <>
-            <div className="pt-8 text-my-white text-xl font-light font-inter">
+            <div className="pt-8 text-xl font-light font-inter">
                 <p className=""> Hi! I’m a
                     Computer Science student at Northeastern University.
                     Besides a student, I am also . When I am not working, you can find me at the Huntington Ave <a href="https://locations.dunkindonuts.com/en/ma/boston/360-huntington-ave/341489?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=341489&y_source=1_MTIxMTEzMTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" target="_blank"
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 ">
             <div className="w-full flex flex-col sm:flex-row m-auto">
                 <div>
-                    <h1 className="text-7xl font-black text-my-white pb-2 text-nowrap">About Me</h1>
+                    <h1 className="text-7xl font-black pb-2 text-nowrap">About Me</h1>
                 </div>
                 <div className="w-full m-auto">
                     {NavBar}

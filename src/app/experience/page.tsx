@@ -9,9 +9,9 @@ import KHOURY_Image from "../../../public/CSandYou.png";
 
 const TitleCard : JSX.Element =
     (
-        <div className="w-full flex flex-col sm:flex-row m-auto">
+        <div className="w-full flex flex-col sm:flex-row m-auto p-3">
             <div>
-                <p className="text-7xl font-black text-my-white pb-2">Experience</p>
+                <p className="text-7xl font-black pb-2">Experience</p>
             </div>
             <div className="w-full m-auto">
                 {NavBar}
@@ -44,10 +44,10 @@ function MakeCardWithList({title, subHeading, bodyText, picture, listedValue}: C
             <div
                 className="w-full h-fit bg-black bg-opacity-30 rounded-2xl flex-col-1 sm:flex sm:flex-col-2">
                 <div className="p-6">
-                    <p className="font-bold text-my-white text-2xl pb-2">{title}</p>
+                    <p className="font-bold text-2xl pb-2">{title}</p>
                     <p className='text-xl font-bold text-my-teal pb-2'>{subHeading}</p>
-                    <p className="text-l text-my-white">{bodyText}</p>
-                    <ul className="list-disc text-l text-my-white p-4">{listedBullets}</ul>
+                    <p className="text-l">{bodyText}</p>
+                    <ul className="list-disc text-l p-4">{listedBullets}</ul>
                 </div>
                 {optionalImage}
             </div>

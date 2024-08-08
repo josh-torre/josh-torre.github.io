@@ -6,7 +6,7 @@ import Josh_Img from "../../../public/Testimonials-Images/Josh-Learned.jpeg"
 
 
 export default function Root(){
-    const defaultQuoteStying = "text-xl text-white font-light";
+    const defaultQuoteStying = "text-xl font-light";
     return (
         <div className="bg-my-dark-blue h-full p-6 pb-4 m-auto">
             {TitleCard}
@@ -30,7 +30,7 @@ export default function Root(){
                 {<TestimonialCard name={"Marco Spaeth"}
                                  image={Marco_Img}
                                  quote={<p className={defaultQuoteStying}>&quot;He went
-                                     <strong className="font-extrabold text-my-lighter-teal">above and beyond </strong>
+                                     <strong className="font-extrabold text-my-lighter-teal"> above and beyond </strong>
                                      to successfully develop a more capable tool than even his supervisor expected to
                                      be possible.&quot;</p>}/>}
             </div>
@@ -42,7 +42,7 @@ const TitleCard: JSX.Element  =
     (
         <div className="w-full flex flex-col sm:flex-row m-auto">
             <div>
-                <p className="text-7xl font-black text-my-white pb-2">Testimonials</p>
+                <p className="text-7xl font-black pb-2">Testimonials</p>
             </div>
             <div className="w-full m-auto">
                 {NavBar}
@@ -69,7 +69,7 @@ function TestimonialCard({name, quote, image, jsx}: TestimonialFields) : JSX.Ele
                         className="rounded-full w-[150px] border-4 border-my-lighter-teal max-w-sm shadow-xl"/>
                 </div>
                 <div className="relative -top-8">
-                    <h3 className="font-inter text-my-white font-black text-3xl text-center p-3">{name}</h3>
+                    <h3 className="font-inter font-black text-3xl text-center p-3">{name}</h3>
                     {quote}
                 </div>
             </div>

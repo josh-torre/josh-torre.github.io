@@ -41,6 +41,6 @@ export default function TypingEffect(): React.JSX.Element {
     }, [text, isDeleting, loopNum, typingSpeed, words]);
 
     return (
-        <h2 className="animate-blinking border-r-2 w-fit border-white">{text}</h2>
+        <h2 className="animate-blinking border-r-2 w-fit">{text}</h2>
     );
 }

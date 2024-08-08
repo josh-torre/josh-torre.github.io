@@ -13,7 +13,7 @@ export function MakeCard({title, subHeading, bodyText, optionalJSX}: CardData) :
             <div
                 className="w-full h-fit bg-black bg-opacity-30 rounded-2xl sm:flex sm:flex-col-2">
                 <div className="p-6">
-                    <p className="font-bold text-my-white text-2xl pb-2">{title}</p>
+                    <p className="font-bold text-2xl pb-2">{title}</p>
                     <p className='text-xl font-bold text-my-teal pb-2'>{subHeading}</p>
                     {bodyText}
                 </div>
