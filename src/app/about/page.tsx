@@ -13,10 +13,11 @@ function BottomLinks(): JSX.Element {
         <div className="w-full flex justify-center">
             <div className="grid grid-cols-3 gap-4">
                 <ClickableIcons
-                    href={"mailto:torre.jo@northeastern.edu"}
+                    href={""}
                     altText={"Mail Icon. Click to send me an email!"}
                     newWindow={true}
-                    img={mailIcon}/>
+                    img={mailIcon}
+                    shouldAlert={true}/>
                 <ClickableIcons
                     href={"https://www.linkedin.com/in/joshua-torre/"}
                     altText={"Linkedin Logo"}
@@ -55,17 +56,17 @@ function RightSideOfHome(): JSX.Element {
 const AboutMeText: JSX.Element =
     (
         <>
-            <div className="pt-8 text-xl font-light font-inter">
-                <p className=""> Hi! I’m a
-                    Computer Science student at Northeastern University.
-                    Besides a student, I am also . When I am not working, you can find me at the Huntington Ave <a href="https://locations.dunkindonuts.com/en/ma/boston/360-huntington-ave/341489?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=341489&y_source=1_MTIxMTEzMTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" target="_blank"
-                                                                                                                     className="text-orange-500 font-bold">Dunkin&apos;</a> or meeting my friends
-                    for some late night Mamacitas.</p>
-                <p className="pt-6">As a professional, <strong className="font-bold text-my-lighter-teal">I am a results-driven software engineer with a background in successful
+            <div className="pt-8 text-2xl md:text-xl sm:text-lg font-light font-inter">
+                <p className=""> Hi! I’m a Computer Science student at Northeastern University.
+                    Besides a student, I am also an avid music enjoyer and I had almost 99,699 minutes of listening in 2023.
+                     When I am not working, you can find me at the Huntington Ave <a href="https://locations.dunkindonuts.com/en/ma/boston/360-huntington-ave/341489?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=341489&y_source=1_MTIxMTEzMTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" target="_blank" className="text-orange-500 font-bold">
+                    Dunkin&apos;</a> or meeting my friends for some late night Mamacitas.</p>
+                <p className="pt-6"><strong className="font-bold text-my-lighter-teal">I am also results-driven software engineer with a background in successful
                     corporate implementations</strong>. As I progress through my career, I am always looking for new opportunities to
                     up-skill and develop my understanding of the ever-changing field of Computer Science. Although the tools,
                     technologies, and methodologies will differ, I plan to keep one thing constant; a commitment to users.
-                    I want to be able to build impactful systems and software to improve the lives of other people. To me, people are what matter most</p>
+                    I want to be able to build impactful systems and software to improve the lives of other people. To me, people are what matter most.
+                    For any inquires, feel free to reach out to me via my email or LinkedIn profile which are both linked on this page.</p>
             </div>
         </>
     );

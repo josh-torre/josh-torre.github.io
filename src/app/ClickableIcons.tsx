@@ -13,8 +13,7 @@ type ClickableInfo = {
 };
 
 const emailAlert = () => {
-    alert('torre [dot] jo [at] northeastern.edu\n\nI am trying to prevent getting the email scraped by bots and get spammed' +
-        '. Sorry its a bit of a pain!!');
+    alert('torre [dot] jo [at] northeastern.edu\n\nI have my email obfuscate!');
 };
 
 export function ClickableIcons({altText, href, newWindow, img, shouldAlert}: ClickableInfo): JSX.Element {
