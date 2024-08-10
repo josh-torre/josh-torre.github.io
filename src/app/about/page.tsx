@@ -1,12 +1,11 @@
+import {ClickableIcons} from "@/app/ClickableIcons";
+import {NavBar} from "@/app/Core Components/Navigation Bar";
 import Image from "next/image";
+
 import portrait from '../../../public/portrait.jpg'
 import mailIcon from '../../../public/Mail Icon.svg'
 import githubIcon from '../../../public/Github.svg'
 import linkedinIcon from '../../../public/Linkedin Icon.svg'
-
-import React from "react";
-import {ClickableIcons} from "@/app/ClickableIcons";
-import {NavBar} from "@/app/Core Components/Navigation Bar";
 
 function BottomLinks(): JSX.Element {
     return (
@@ -36,7 +35,7 @@ function BottomLinks(): JSX.Element {
 
 function LeftSideOfHome(): JSX.Element {
     return (
-        <div className="w-4/6 sm:w-full pr-8 flex flex-col m-auto">
+        <div className="w-4/6 sm:w-full pr-8 pl-8 flex flex-col m-auto">
             {AboutMeText}
         </div>
     );
@@ -56,7 +55,7 @@ function RightSideOfHome(): JSX.Element {
 const AboutMeText: JSX.Element =
     (
         <>
-            <div className="pt-8 text-2xl md:text-xl sm:text-lg font-light font-inter">
+            <div className="pt-8 2xl:text-3xl md:text-xl sm:text-md font-light font-inter">
                 <p className=""> Hi! I’m a Computer Science student at Northeastern University.
                     Besides a student, I am also an avid music enjoyer and I had almost 99,699 minutes of listening in 2023.
                      When I am not working, you can find me at the Huntington Ave <a href="https://locations.dunkindonuts.com/en/ma/boston/360-huntington-ave/341489?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=341489&y_source=1_MTIxMTEzMTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D" target="_blank" className="text-orange-500 font-bold">
@@ -86,16 +85,16 @@ const AddPortrait : JSX.Element =
 
 export default function Home() {
     return (
-        <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 ">
-            <div className="w-full flex flex-col sm:flex-row m-auto">
+        <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6">
+            <header className="w-full flex flex-col sm:flex-row m-auto">
                 <div>
                     <h1 className="text-7xl font-black pb-2 text-nowrap">About Me</h1>
                 </div>
                 <div className="w-full m-auto">
                     {NavBar}
                 </div>
-            </div>
-            <div className="flex flex-col sm:flex-row">
+            </header>
+            <div className="flex h-full flex-col sm:flex-row align-middle m-auto">
                 <LeftSideOfHome/>
                 <RightSideOfHome/>
             </div>
