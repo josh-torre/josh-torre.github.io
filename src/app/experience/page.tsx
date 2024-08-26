@@ -67,21 +67,20 @@ export default function Root() {
                         title={"Software Engineering Intern"}
                         subHeading={"SPIROL International | Summers 2021 - 2024 "}
                         bodyText={""}
-                        listedValue={["Saved over 1500 hours annually by implementing business process automations with UIPath",
-                            "Leveraged Agile methodologies and GIT to improve deliverable quality and version control",
-                            "Lead weekly meetings with 5 beta testers to action feedback and measure impact",
-                            "Strategically refactored the existing codebase for improved runtime and consistency",
-                            "Created user guides and technical documentation for worldwide stakeholders",
-                            "Established the company's first-ever process automations using UIPath, an RPA tool",
-                            "Collaborated with other technical staff to roll out unattended automations across the global organization"]}
+                        listedValue={["Established the company's first-ever business processes with UiPath and C#, saving an estimated 3,500 hours",
+                        "Automated the soft collections process for SPIROL’s 30,000 customers and observed faster payment times",
+                        "Lead weekly meetings with 5 beta testers to action feedback and measure impact",
+                        "Leveraged Agile methodologies and Azure DevOps to improve deliverable quality and version control",
+                        "Strategically refactored existing codebase for improved process uptime, integrity of data, and ease of use",
+                        "Collaborated with global stakeholders to improve existing automations and measure impact on the organization "]}
                         picture={SPIROL_IMAGE}/>
                     <MakeCardWithList
                         title={"Teaching Assistant (TA)"}
                         subHeading={"Northeastern University | January 2024 - Present "}
                         bodyText={""}
-                        listedValue={["\n" +
-                            "Led a lab of 38 students and conducted lecture-style sessions to reinforce course learning goals",
-                            "Explained technical concepts using nontechnical parallelisms and analogies to facilitate learning",
+                        listedValue={["Led a team of 15 TAs to provide additional tutoring for students in need and measured student progress",
+                            "Directed a lab of 38 students and conducted lecture-style sessions to reinforce course learning goals",
+                            "Taught core functional programming (FP) concepts and software development best practices",
                             "Conducted the grading of exams, homework and labs in a timely manner with actionable and productive feedback"]}
                         picture={KHOURY_Image}/>
                     <MakeCardWithList

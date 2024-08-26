@@ -77,7 +77,7 @@ const AddPortrait : JSX.Element =
                 placeholder="blur"
                 alt={"A picture of Joshua Torre in front of the Sydney Bridge and the Sydney Opera House"}
                 src={portrait}
-                className="max-w-[70%] sm:w-[100%] rounded-[20%] border-8 border-my-teal"
+                className="max-w-[60%] sm:w-[90%] rounded-[20%] border-8 border-my-teal"
             />
         </div>
     );
