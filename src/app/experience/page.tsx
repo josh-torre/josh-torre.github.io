@@ -1,5 +1,3 @@
-import {MakeCard} from "@/app/Core Components/Core Card";
-import linkedinIcon from "public/Linkedin Icon.svg";
 import React from "react";
 import {NavBar} from "@/app/Core Components/Navigation Bar";
 import Image from "next/image";
@@ -34,7 +32,7 @@ function MakeCardWithList({title, subHeading, bodyText, picture, listedValue}: C
     const optionalImage : JSX.Element = picture == undefined ? <></> : (
         <div className="p-6">
             <Image
-            alt={"altText"}
+            alt={""}
             src={picture}
             className="border-5 border-my-tan rounded-xl aspect-square max-h-[250px] max-w-[350px]"/>
         </div>);
@@ -49,7 +47,7 @@ function MakeCardWithList({title, subHeading, bodyText, picture, listedValue}: C
                     <p className="text-l">{bodyText}</p>
                     <ul className="list-disc text-l p-4">{listedBullets}</ul>
                 </div>
-                <div className="flex flex-col items-center w-fit">
+                <div className="flex items-center justify-center">
                     {optionalImage}
                 </div>
             </div>
@@ -67,12 +65,11 @@ export default function Root() {
                         title={"Software Engineering Intern"}
                         subHeading={"SPIROL International | Summers 2021 - 2024 "}
                         bodyText={""}
-                        listedValue={["Established the company's first-ever business processes with UiPath and C#, saving an estimated 3,500 hours",
-                        "Automated the soft collections process for SPIROL’s 30,000 customers and observed faster payment times",
-                        "Lead weekly meetings with 5 beta testers to action feedback and measure impact",
-                        "Leveraged Agile methodologies and Azure DevOps to improve deliverable quality and version control",
-                        "Strategically refactored existing codebase for improved process uptime, integrity of data, and ease of use",
-                        "Collaborated with global stakeholders to improve existing automations and measure impact on the organization "]}
+                        listedValue={["Implemented SPIROL’s first business process automations (UiPath, C#) to save an estimated 3,500 hours on manual tasks previously transacted in a dated ERP system, validating improvements with five beta testers",
+                            "Automated the soft collections process for 30K customers using UiPath, HTML, and the Robotic Enterprise Framework, resulting in faster response times and an enhanced user experience to improve customer perception",
+                            "Initiated Agile best practices via Azure DevOps to improve deliverable quality and version control",
+                            "Strategically refactored existing codebase for improved process uptime, integrity of data, and ease of use",
+                            "Collaborated with global stakeholders to improve existing automations and measure impact on the organization"]}
                         picture={SPIROL_IMAGE}/>
                     <MakeCardWithList
                         title={"Teaching Assistant (TA)"}
