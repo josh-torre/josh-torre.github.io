@@ -13,7 +13,7 @@ type ClickableInfo = {
 };
 
 const emailAlert = () => {
-    alert('torre [dot] jo [at] northeastern.edu\n\nI have my email obfuscate!');
+    alert('torre [dot] jo [at] northeastern.edu');
 };
 
 export function ClickableIcons({altText, href, newWindow, img, shouldAlert}: ClickableInfo): JSX.Element {
