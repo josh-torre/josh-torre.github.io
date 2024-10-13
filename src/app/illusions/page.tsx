@@ -1,97 +1,124 @@
 "use client";
+import {NavBar} from "@/app/Core Components/Navigation Bar";
+import React, {useEffect, useRef, useState} from "react";
 
-import { useState, useEffect } from 'react';
-
+const TitleCard: JSX.Element = (
+    <div className="w-full flex flex-col border-spacing-0 sm:flex-row m-auto p-3">
+        <div className="h-fit">
+            <p className="text-7xl font-black pb-2">Illusions</p>
+        </div>
+        <div className="w-full h-fit m-auto">{NavBar}</div>
+    </div>
+);
 
 export default function Page() {
+    const ballRef = useRef<HTMLCanvasElement | null>(null);
+    const illusionCanvasRef = useRef<HTMLCanvasElement | null>(null);
+
     useEffect(() => {
-        applyRandomPixel("illusion-canvas");
+        const canvas = illusionCanvasRef.current;
+        if (canvas) {
+            canvas.width = 850 * 0.5;
+            canvas.height = 450 * 0.5;
+            applyRandomPixel(canvas);
+        }
+
+        if (ballRef.current) {
+            const size = 50;
+            ballRef.current.width = size*0.5;
+            ballRef.current.height = size*0.5;
+            ballRef.current.style.width = size + 'px';
+            ballRef.current.style.height = size + 'px';
+            applyRandomPixel(ballRef.current); // Apply the mask to the ball canvas
+        }
     }, []);
 
     return (
-        <>
-            <div className="h-screen w-full flex justify-center items-center bg-my-dark-blue">
-                <div className="w-[75%] h-[75%] bg-white bg-blend-color overflow-hidden" id="illusion-container">
-                    <canvas className="h-full w-full" id="illusion-canvas"/>
-                    <FollowCursor />
+        <div className="h-screen w-screen bg-my-dark-blue p-6 flex flex-col">
+            <div className="fixed top-0 w-full bg-my-dark-blue cursor-auto">
+                {TitleCard}
+            </div>
+            <div className="flex-grow flex items-center justify-center pt-[60px] overflow-clip">
+                <div className="h-[80%] w-[80%] overflow-hidden cursor-none"
+                    id="illusion-container">
+                    <canvas
+                        ref={illusionCanvasRef}
+                        className="h-full w-full"
+                    />
+                    <FollowCursor ballRef={ballRef} illusionCanvasRef={illusionCanvasRef} />
                 </div>
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
-const canvas = document.getElementById("illusion-canvas");
-function applyRandomPixel(id: string) {
-    let canvas : HTMLCanvasElement = document.getElementById("illusion-canvas") as HTMLCanvasElement;
-    if(!canvas){
+function applyRandomPixel(canvas: HTMLCanvasElement) {
+    if (!canvas) {
         throw new Error("Unable to find canvas element to apply mask");
     }
-    if(!canvas.getContext("2d")){
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) {
         throw new Error("Unable to read context");
     }
 
-    let mutableMask = canvas.getContext("2d")!.createImageData(canvas.width, canvas.height);
-    for(let index = 0; index < mutableMask.data.length; index+=4) {
-        const colorScalar = Math.random();
+    const width = canvas.width;
+    const height = canvas.height;
 
-        //Apply color to mask
-        mutableMask.data[index] = colorScalar * 255;  // red   color
-        mutableMask.data[index + 1] = colorScalar * 255;  // green color
-        mutableMask.data[index + 2] = colorScalar * 255;  // blue  color
-        mutableMask.data[index + 3] =255*(1-colorScalar); //Either 1 or 0 for alpha
+    for (let x = 0; x < width; x += 0.5) {
+        for (let y = 0; y < height; y += 0.5) {
+            const randomValue = Math.random() * 255;
+            // Draw a rectangle (represents a single pixel)
+            ctx.fillStyle = `rgba(${randomValue}, ${randomValue}, ${randomValue}, 1)`;
+            ctx.fillRect(x, y, 1, 1);
+        }
     }
-    //Add the image to the canvas
-    canvas.getContext("2d")!.putImageData(mutableMask, 0, 0);
 }
 
-function FollowCursor() {
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+function FollowCursor({ballRef, illusionCanvasRef,}: {
+    ballRef: React.RefObject<HTMLCanvasElement>;
+    illusionCanvasRef: React.RefObject<HTMLCanvasElement>; }) {
+    const [position, setPosition] =
+        useState<{ x: number; y: number } | null>(null);
 
     useEffect(() => {
         const handleMouseMove = (event: MouseEvent) => {
-            const canvas = document.getElementById("illusion-canvas");
-            if (canvas) {
-                const rect = canvas.getBoundingClientRect(); // Get canvas position in the viewport
-                const x = event.clientX // Mouse X relative to canvas
-                const y = event.clientY // Mouse Y relative to canvas
+            const canvas = illusionCanvasRef.current;
+            if (!canvas) return;
 
-                // Check if the cursor is inside the canvas boundaries
-                if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
-                    setPosition({ x, y });
-                }
+            const rect = canvas.getBoundingClientRect();
+            const x = event.clientX;
+            const y = event.clientY;
+
+            if (
+                x >= rect.left &&
+                x <= rect.right &&
+                y >= rect.top &&
+                y <= rect.bottom) {
+                setPosition({ x, y });
+            } else {
+                setPosition(null);
             }
         };
 
-        // Add event listener for mousemove
-        window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
+    }, [illusionCanvasRef]);
 
-        // Clean up the event listener on component unmount
-        return () => {
-            window.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, []);
-
-    const canvas = document.getElementById("illusion-canvas");
-    if(canvas) {
-        return (
-            <>
-                (
-                <div
-                    style={{
-                        left:`${position.x}px`,
-                        top:`${position.y}px`,
-                        position: 'absolute', // Use absolute positioning
-                        transform: 'translate(-50%, -50%)', // Center the circle around the cursor
-                    }}
-                    className="w-[60px] h-[60px] bg-blue-500 opacity-50 rounded-full pointer-events-none">
-                    <canvas className="w-full h-full" id="ball"/>
-                </div>
-                )
-            </>
-        );
-    }
-    return <></>
+    return (
+        <canvas
+            ref={ballRef}
+            id="ball"
+            style={{
+                position: "absolute",
+                left: position ? `${position.x}px` : "0px",
+                top: position ? `${position.y}px` : "0px",
+                transform: position ? "translate(-50%, -50%)" : "none",
+                display: position ? "block" : "none",
+            }}
+            width={"10%"}
+            height={"10%"}
+            className="rounded-full"
+        />
+    );
 }
-
-// applyRandomPixel("illusion-canvas");
-
