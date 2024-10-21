@@ -1,14 +1,27 @@
+"use client"
 import {InfoCard} from "@/app/Core Components/Core Card"
 import TitleCard from "@/app/Core Components/PageTitle";
+import {motion} from "framer-motion";
 
 import "../globals.css";
 import React from "react";
-import {Button} from "@/app/Core Components/ButtonComponent";
 
 export default function Root() {
+    const containerRules = {
+        hidden: {},
+        animate: {
+            transition: {
+                staggerChildren: 0.4,
+            },
+        },
+    };
     return (
         <>
-            <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col">
+            <motion.div
+                className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col"
+                variants={containerRules}
+                initial="hidden"
+                animate="animate">
                 <TitleCard title="Projects"/>
                 <div>
                     <InfoCard
@@ -24,6 +37,7 @@ export default function Root() {
                             primarily tests the performance write commits.
                             At the end of the project, a stress-test was preformed using an EC2 instance on AWS to measure
                             the latency for the completed drivers.</p>}
+                        animate={true}
                         />
                     <InfoCard
                         title={"Maze Generator and Solver"}
@@ -32,6 +46,7 @@ export default function Root() {
                             The maze can then be solved using Breath First Search (BFS), Depth First Search (DFS), and the A*
                             algorithm using the Manhattan distance heuristic. The program also supports both hexagonal and
                             square mazes, allowing for an extra layer of complexity for users who want a challenge.</p>}
+                        animate={true}
                     />
                     <InfoCard
                         title={"Soft Collections Automation"}
@@ -40,6 +55,7 @@ export default function Root() {
                              This project was rolled out to 14 branches across the globe and served SPIROL’s more than
                              30,000 customers. This has an estimated time savings of over 875 hours per year as well as
                              faster customer response time and customer perception.</p>}
+                        animate={true}
                     />
                     <InfoCard
                         title={"Automated Identity and Access Management (IAM)"}
@@ -47,6 +63,7 @@ export default function Root() {
                         bodyText={<p>Developed a pipeline for SPIROL International between Human Resources and IT to streamline
                             the new hire process by automating the creation of accounts in Active Directory, Lotus Notes
                             Profiles, Logon Scripts, and Networked Drives with relevant permissions.</p>}
+                        animate={true}
                     />
                     <InfoCard
                         title={"Image Compression - Seam Removal*"}
@@ -55,11 +72,12 @@ export default function Root() {
                              image. It will remove the “least interesting” seams which is by calculating the average brightness
                              of the adjacent horizontal and vertical pixels. The project was developed with the SOLID object
                              oriented design principles in mind.</p>}
+                        animate={true}
                     />
                 </div>
                 <p className="text-my-tan font-bold text-xl p-4 place-content-center float-right">
                     All code available upon request. All projects marked with a (*) are class projects</p>
-            </div>
+            </motion.div>
         </>
     )
 }

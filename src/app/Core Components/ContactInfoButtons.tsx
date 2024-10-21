@@ -1,4 +1,4 @@
-import {ClickableIcons} from "@/app/HomeComponents/ClickableIcons";
+import {ClickableIcons} from "@/app/Home Components/ClickableIcons";
 import React from "react";
 
 import mailIcon from '/public/Mail Icon.svg'

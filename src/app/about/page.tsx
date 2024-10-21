@@ -1,4 +1,4 @@
-import {ClickableIcons} from "@/app/HomeComponents/ClickableIcons";
+import {ClickableIcons} from "@/app/Home Components/ClickableIcons";
 import {NavBar} from "@/app/Core Components/Navigation Bar";
 import Image from "next/image";
 
@@ -16,7 +16,7 @@ export default function AboutMe() {
             <header className="w-full flex flex-col sm:flex-row m-auto">
                 <TitleCard title={"About Me"}/>
             </header>
-            <div className="flex h-full flex-col sm:flex-row align-middle m-auto">
+            <div className="flex h-full flex-col sm:flex-row">
                 <div className="w-4/6 sm:w-full pr-8 pl-8 flex flex-col m-auto">
                     <div className="flex justify-center items-center text-center">
                         {ThreeWords}
@@ -44,14 +44,12 @@ const ThreeWords: JSX.Element = (
 const AboutMeText: JSX.Element =
     (
         <>
-            <div className="pt-8 2xl:text-3xl md:text-xl sm:text-md font-inter">
+            <div className="pt-8 2xl:text-4xl md:text-2xl sm:text-lg font-inter">
                 <p className="font-thin">Hi! My name is Josh and I&apos;m a Computer
                     Science student at Northeastern University. In high school, I discovered my passion for computer
                     science, and I&apos;ve been dedicated to learning ever since.
                     I&apos;m eager to bring this drive and enthusiasm to all of my projects,
                     <strong className="text-my-lighter-teal font-bold"> where I can apply my knowledge and exceed predefined expectations. </strong>
-                    <br/>
-                    <br/>
                     If you have any questions, feel free to reach out to me using the links on this page.
                 </p>
             </div>

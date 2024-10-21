@@ -11,6 +11,5 @@ export default function Portrait() {
     src={portrait}
     className="max-w-[70%] sm:w-[100%] rounded-[20%] border-8 border-my-teal"
         />
-        </div>
-);
+        </div>);
 }

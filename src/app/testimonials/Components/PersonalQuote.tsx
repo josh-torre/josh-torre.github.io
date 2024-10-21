@@ -1,4 +1,6 @@
+"use client"
 import Image from "next/image";
+import {motion} from "framer-motion";
 
 type TestimonialFields = {
     name: string;
@@ -8,9 +10,16 @@ type TestimonialFields = {
 }
 
 export default function TestimonialCard({name, quote, image, jsx}: TestimonialFields) : JSX.Element{
+    const elementAnimation = {
+        hidden: {opacity: 0},
+        animate: { opacity: 1, transition: {duration: 0.5 } },
+    };
+
     return (
         <div className="p-6 w-[100%] sm:w-[50%]">
-            <div className="h-fit m-auto bg-black bg-opacity-20 mx-auto rounded-xl p-3 pt-1/2 flex-col-1 mt-16">
+            <motion.div
+                className="h-fit m-auto bg-black bg-opacity-20 mx-auto rounded-xl p-3 pt-1/2 flex-col-1 mt-16"
+                variants={elementAnimation}>
                 <div className={"relative -top-16 flex justify-center"}>
                     <Image
                         src={image}
@@ -21,7 +30,7 @@ export default function TestimonialCard({name, quote, image, jsx}: TestimonialFi
                     <h3 className="font-inter font-black text-3xl text-center p-3">{name}</h3>
                     {quote}
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

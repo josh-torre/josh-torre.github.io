@@ -1,14 +1,27 @@
+"use client"
 import React from "react";
 import SPIROL_IMAGE from "../../../public/SPIROL-LOGO.jpeg";
 import Robotics_Image from "../../../public/WorldChampEngDesign.jpg";
 import KHOURY_Image from "../../../public/CSandYou.png";
 import TitleCard from "@/app/Core Components/PageTitle";
 import CardFromList from "@/app/Core Components/CardFromList";
+import {motion} from "framer-motion";
 
-export default function Root() {
+export default function Root() {const containerRules = {
+    hidden: {},
+    animate: {
+        transition: {
+            staggerChildren: 0.4,
+        },}
+    ,}
+;
     return (
         <>
-            <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col">
+            <motion.div
+                className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col"
+                variants={containerRules}
+                initial="hidden"
+                animate="animate">
                 <TitleCard title="Experience"/>
                 <div>
                     <CardFromList
@@ -20,7 +33,9 @@ export default function Root() {
                             "Initiated Agile best practices via Azure DevOps to improve deliverable quality and version control",
                             "Strategically refactored existing codebase for improved process uptime, integrity of data, and ease of use",
                             "Collaborated with global stakeholders to improve existing automations and measure impact on the organization"]}
-                        picture={SPIROL_IMAGE}/>
+                        picture={SPIROL_IMAGE}
+                        animate={true}
+                    />
                     <CardFromList
                         title={"Teaching Assistant (TA)"}
                         subHeading={"Northeastern University | January 2024 - Present "}
@@ -29,7 +44,9 @@ export default function Root() {
                             "Directed a lab of 38 students and conducted lecture-style sessions to reinforce course learning goals",
                             "Taught core functional programming (FP) concepts and software development best practices",
                             "Conducted the grading of exams, homework and labs in a timely manner with actionable and productive feedback"]}
-                        picture={KHOURY_Image}/>
+                        picture={KHOURY_Image}
+                        animate={true}
+                    />
                     <CardFromList
                         title={"Lead Developer"}
                         subHeading={"Killingly High School Robotics | Aug 2021 - May 2023 "}
@@ -38,7 +55,9 @@ export default function Root() {
                             "Worked with engineering and design teams to refine mechanical and software systems",
                             "Crowned World Champions in Engineering Design at the Vex Robotics World Championship, 2022",
                             "Awarded the Engineering Design award at the Japanese Regionals event 2023"]}
-                        picture={Robotics_Image}/>
+                        picture={Robotics_Image}
+                        animate={true}
+                    />
                     <CardFromList
                         title={"Technician's Assistant"}
                         subHeading={"Killingly Public Schools | June 2020 - May 2023 "}
@@ -47,9 +66,11 @@ export default function Root() {
                         "Cleaned and reset devices for students across the district for IPads, Chromebooks and MacBooks",
                             "Preformed installation of computers, monitors, printers and other devices across the district",
                         "Aided in the completion of tickets alongside a technician of printers, computers, and other devices"]}
-                        picture={undefined}/>
+                        picture={undefined}
+                        animate={true}
+                    />
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }
