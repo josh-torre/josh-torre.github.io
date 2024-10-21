@@ -4,8 +4,7 @@ import {usePathname} from "next/navigation";
 
 
 export const NavBar : JSX.Element =
-    (<div className="p-3 pt-1">
-            <div className="bg-black bg-opacity-50 h-fit w-fit rounded-2xl flex float-right">
+    (<div className="bg-black bg-opacity-50 h-fit w-fit rounded-2xl flex float-right">
                 <nav>
                     <ul className="flex w-full select-none place-content-center flex-wrap">
                         <NavBarLocation name={"Home"} href={"/"}/>
@@ -15,8 +14,7 @@ export const NavBar : JSX.Element =
                         <NavBarLocation name={"About"} href={"/about"}/>
                     </ul>
                 </nav>
-            </div>
-        </div>);
+            </div>);
 
 
 type BarLocationInfo ={
@@ -25,7 +23,7 @@ type BarLocationInfo ={
 }
 
 function NavBarLocation({name, href}: BarLocationInfo) : JSX.Element {
-    let defaultTextStyle: string = "p-5 text-xl";
+    let defaultTextStyle: string = "p-4 font-semibold text-2xl";
     const currentPath = usePathname();
     return (
         <>

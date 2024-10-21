@@ -7,7 +7,7 @@ type ButtonInfo = {
     link: string;
     newWindow?: boolean;
 };
-export function MyButton({text, link, newWindow}: ButtonInfo): JSX.Element {
+export function Button({text, link, newWindow}: ButtonInfo): JSX.Element {
     const targetString : string = newWindow ? "_blank" : "_self";
     return (
         <a href={link} target={targetString}>

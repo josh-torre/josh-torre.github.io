@@ -1,15 +1,15 @@
-import {NavBar} from "@/app/Core Components/Navigation Bar";
-import Image from "next/image";
 import Marco_Img from "../../../public/Testimonials-Images/Marco-Spaeth.jpeg"
 import Kevin_Img from "../../../public/Testimonials-Images/kevin-gibbs.jpeg"
 import Josh_Img from "../../../public/Testimonials-Images/Josh-Learned.jpeg"
+import TestimonialCard from "@/app/testimonials/Components/PersonalQuote";
+import TitleCard from "@/app/Core Components/PageTitle";
 
 
 export default function Root(){
     const defaultQuoteStying = "text-xl font-light";
     return (
         <div className="bg-my-dark-blue h-full min-h-screen p-6 pb-4 m-auto">
-            {TitleCard}
+            <TitleCard title="Testimonials"/>
             <div className="flex flex-col m-auto justify-items-center w-fit sm:flex-row">
                  <TestimonialCard name={"Kevin Gibbs"}
                                  image={Kevin_Img}
@@ -33,45 +33,6 @@ export default function Root(){
                                      <strong className="font-extrabold text-my-lighter-teal"> above and beyond </strong>
                                      to successfully develop a more capable tool than even his supervisor expected to
                                      be possible.&quot;</p>}/>}
-            </div>
-        </div>
-    );
-}
-
-const TitleCard: JSX.Element  =
-    (
-        <div className="w-full flex flex-col sm:flex-row m-auto">
-            <div>
-                <p className="text-7xl font-black pb-2">Testimonials</p>
-            </div>
-            <div className="w-full m-auto">
-                {NavBar}
-            </div>
-        </div>
-    );
-
-
-type TestimonialFields = {
-    name: string;
-    quote: JSX.Element;
-    image: any;
-    jsx?: JSX.Element | undefined;
-}
-
-function TestimonialCard({name, quote, image, jsx}: TestimonialFields) : JSX.Element{
-    return (
-        <div className="p-6 w-[100%] sm:w-[50%]">
-            <div className="h-fit m-auto bg-black bg-opacity-20 mx-auto rounded-xl p-3 pt-1/2 flex-col-1 mt-16">
-                <div className={"relative -top-16 flex justify-center"}>
-                    <Image
-                        src={image}
-                        alt={name + " Portrait"}
-                        className="rounded-full w-[150px] border-4 border-my-lighter-teal max-w-sm shadow-xl"/>
-                </div>
-                <div className="relative -top-8">
-                    <h3 className="font-inter font-black text-3xl text-center p-3">{name}</h3>
-                    {quote}
-                </div>
             </div>
         </div>
     );

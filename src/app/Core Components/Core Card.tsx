@@ -2,10 +2,10 @@ type CardData = {
     title: string;
     subHeading: string;
     bodyText: JSX.Element;
-    optionalJSX: JSX.Element | undefined;
+    optionalJSX?: JSX.Element | undefined;
 };
 
-export function MakeCard({title, subHeading, bodyText, optionalJSX}: CardData) : JSX.Element {
+export function InfoCard({title, subHeading, bodyText, optionalJSX}: CardData) : JSX.Element {
     const sideContentSize: string = optionalJSX == undefined ? "" : "w-[50%]";
     optionalJSX = optionalJSX == undefined ? <></> : optionalJSX;
     return (

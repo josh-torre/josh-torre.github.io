@@ -1,15 +1,6 @@
 "use client";
-import {NavBar} from "@/app/Core Components/Navigation Bar";
 import React, {useEffect, useRef, useState} from "react";
-
-const TitleCard: JSX.Element = (
-    <div className="w-full flex flex-col border-spacing-0 sm:flex-row m-auto p-3">
-        <div className="h-fit">
-            <p className="text-7xl font-black pb-2">Illusions</p>
-        </div>
-        <div className="w-full h-fit m-auto">{NavBar}</div>
-    </div>
-);
+import TitleCard from "@/app/Core Components/PageTitle";
 
 export default function Page() {
     const ballRef = useRef<HTMLCanvasElement | null>(null);
@@ -36,7 +27,7 @@ export default function Page() {
     return (
         <div className="h-screen w-screen bg-my-dark-blue p-6 flex flex-col">
             <div className="fixed top-0 w-full bg-my-dark-blue cursor-auto">
-                {TitleCard}
+                <TitleCard title={"Illusion"}/>
             </div>
             <div className="flex-grow flex items-center justify-center pt-[60px] overflow-clip">
                 <div className="h-[80%] w-[80%] overflow-hidden cursor-none"

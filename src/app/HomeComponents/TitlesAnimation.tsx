@@ -9,7 +9,8 @@ export default function TypingEffect(): React.JSX.Element {
     const [loopNum, setLoopNum] = React.useState(0);
     const [typingSpeed, setTypingSpeed] = React.useState(200);
 
-    const words = ["Software Engineer", "Teammate", "Dunkin' Enthusiast", "People Person"];
+    const words = ["Software Engineer", "Teammate", "Dunkin' Enthusiast", "People Person", "Honors Student",
+        "Actively Curious"];
 
     React.useEffect(() => {
         const handleTyping = () => {
