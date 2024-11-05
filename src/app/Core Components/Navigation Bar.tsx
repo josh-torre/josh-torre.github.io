@@ -28,7 +28,7 @@ function NavBarLocation({name, href}: BarLocationInfo) : JSX.Element {
     return (
         <>
             <motion.a href={href} className="f-full"
-                      whileHover={{scale: 1.1, color:'#6ac5b6', fontWeight:"bolder"}}
+                      whileHover={{scale: 1.1, color:'#6ac5b6'}}
                       whileTap={{scale: 0.95}}>
                 <li className={currentPath === href ? "text-my-teal underline " + defaultTextStyle : defaultTextStyle}>
                     {name}

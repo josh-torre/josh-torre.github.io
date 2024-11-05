@@ -43,20 +43,21 @@ export default function Home() {
                 <div className="w-4/6 sm:w-full pr-8 flex flex-col m-auto">
                     {TitleCard}
                     <motion.div
+                        id="top lvl"
                         className="w-full flex-col justify-items-center pt-10"
                         variants={containerRules}
                         initial="hidden"
                         animate="animate">
-                        <motion.div variants={elementAnimation}>
+                        <motion.div className="w-[75%] w-min-fit" variants={elementAnimation}>
                             <Button text={"Projects"} link={"/projects"} newWindow={false}/>
                         </motion.div>
-                        <motion.div variants={elementAnimation}>
+                        <motion.div className="w-[75%] w-min-fit" variants={elementAnimation}>
                             <Button text={"Experience"} link={"/experience"} newWindow={false}/>
                         </motion.div>
-                        <motion.div variants={elementAnimation}>
+                        <motion.div className="w-[75%] w-min-fit" variants={elementAnimation}>
                             <Button text={"Testimonials"} link={"/testimonials"} newWindow={false}/>
                         </motion.div>
-                        <motion.div variants={elementAnimation}>
+                        <motion.div className="w-[75%] w-min-fit" variants={elementAnimation}>
                             <Button text={"About Me"} link={"/about"} newWindow={false}/>
                         </motion.div>
                     </motion.div>

@@ -1,14 +1,9 @@
-import {ClickableIcons} from "@/app/Home Components/ClickableIcons";
-import {NavBar} from "@/app/Core Components/Navigation Bar";
-import Image from "next/image";
-
-import portrait from '../../../public/portrait.jpg'
-import mailIcon from '../../../public/Mail Icon.svg'
-import githubIcon from '../../../public/Github.svg'
-import linkedinIcon from '../../../public/Linkedin Icon.svg'
+"use client"
 import TitleCard from "@/app/Core Components/PageTitle";
 import Portrait from "@/app/Core Components/JoshPortrait";
 import BottomLinks from "@/app/Core Components/ContactInfoButtons";
+import {motion} from "framer-motion";
+
 
 export default function AboutMe() {
     return (
@@ -36,16 +31,23 @@ export default function AboutMe() {
 const ThreeWords: JSX.Element = (
     <>
         <p className="pt-8 text-my-lighter-teal font-extrabold 2xl:text-5xl md:text-3xl sm:text-xl">
-            Ambitious &bull; Curious &bull; Dependable
+            <motion.span
+                whileHover={{ scale: 1.1, color: '#ffffff' }} style={{ display: 'inline-block' }}>
+                &nbsp;Ambitious &nbsp;</motion.span> &bull;
+            <motion.span whileHover={{ scale: 1.1, color: '#ffffff' }} style={{ display: 'inline-block' }}>
+                &nbsp; Curious&nbsp;</motion.span> &bull;
+            <motion.span whileHover={{ scale: 1.1, color: '#ffffff' }} style={{ display: 'inline-block' }}>
+                &nbsp; Dependable&nbsp;</motion.span>
         </p>
     </>
 );
+
 
 const AboutMeText: JSX.Element =
     (
         <>
             <div className="pt-8 2xl:text-4xl md:text-2xl sm:text-lg font-inter">
-                <p className="font-thin">Hi! My name is Josh and I&apos;m a Computer
+                <p className="text-light">Hi! My name is Josh and I&apos;m a Computer
                     Science student at Northeastern University. In high school, I discovered my passion for computer
                     science, and I&apos;ve been dedicated to learning ever since.
                     I&apos;m eager to bring this drive and enthusiasm to all of my projects,
