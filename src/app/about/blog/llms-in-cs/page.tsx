@@ -28,7 +28,6 @@ export default function llmsInCS() {
 
 
 
-
               {/*Intro*/}
             <h2 className="font-bold text-2xl p-2 pt-3">Introduction</h2>
               <p className={standardParaStyle}>

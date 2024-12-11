@@ -7,7 +7,8 @@ export default function AboutMe() {
           <header className="w-full flex flex-col sm:flex-row m-auto">
               <TitleCard title={"My Blog"}/>
           </header>
-          <Link href="blog/llms-in-cs">Dashboard</Link>
+          <Link href="blog/llms-in-cs">The Path to Mediocrity:
+          Use of Large Language Models and Generative AI in Introductory Computer Science Classes</Link>
         </div>
  )
 }
