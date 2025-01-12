@@ -25,7 +25,7 @@ export default function Page() {
     }, []);
 
     return (
-        <div className="h-screen w-screen bg-my-dark-blue p-6 flex flex-col">
+        <div className="h-screen w-screen bg-my-dark-blue p-12 flex flex-col">
             <div className="fixed top-0 w-full bg-my-dark-blue cursor-auto">
                 <TitleCard title={"Illusion"}/>
             </div>

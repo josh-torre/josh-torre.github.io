@@ -17,7 +17,7 @@ export default function Root(){
         },
     };
     return (
-        <div className="bg-my-dark-blue h-full min-h-screen p-6 pb-4 m-auto">
+        <div className="bg-my-dark-blue h-full min-h-screen p-12 pb-4 m-auto">
             <TitleCard title="Testimonials"/>
             <motion.div
                 className="flex flex-col m-auto justify-items-center w-fit sm:flex-row"

@@ -7,7 +7,7 @@ import {motion} from "framer-motion";
 
 export default function AboutMe() {
     return (
-        <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6">
+        <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-12">
             <header className="w-full flex flex-col sm:flex-row m-auto">
                 <TitleCard title={"About Me"}/>
             </header>

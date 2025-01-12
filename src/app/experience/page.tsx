@@ -18,7 +18,7 @@ export default function Root() {const containerRules = {
     return (
         <>
             <motion.div
-                className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col"
+                className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-12 flex flex-col"
                 variants={containerRules}
                 initial="hidden"
                 animate="animate">

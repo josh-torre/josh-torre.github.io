@@ -39,7 +39,7 @@ export default function Home() {
 
     return (
         <>
-            <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col sm:flex-row">
+            <div className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-12 flex flex-col sm:flex-row">
                 <div className="w-4/6 sm:w-full pr-8 flex flex-col m-auto">
                     {TitleCard}
                     <motion.div

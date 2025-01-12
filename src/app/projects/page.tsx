@@ -1,7 +1,9 @@
 "use client"
-import {InfoCard} from "@/app/Core Components/Core Card"
+import { InfoCard } from "@/app/Core Components/Core Card"
 import TitleCard from "@/app/Core Components/PageTitle";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
+import Image from 'next/image'
+import Link from 'next/link'
 
 import "../globals.css";
 import React from "react";
@@ -18,12 +20,63 @@ export default function Root() {
     return (
         <>
             <motion.div
-                className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-6 flex flex-col"
+                className="h-full w-full min-h-screen max-h-full bg-my-dark-blue p-12 flex flex-col"
                 variants={containerRules}
                 initial="hidden"
                 animate="animate">
                 <TitleCard title="Projects"/>
                 <div>
+
+                    <InfoCard
+                        title={"Passwordle: Gamified Cyber Security Education"}
+                        subHeading={"Go, React, Next.JS, MongoDB, Figma, Typescript"}
+                        bodyText={
+                        <div className="w-full h-full items-center justify-center">
+                            <ul className="list-disc p-4">
+                                <li>
+                                Established a gamified platform where users can learn about password security by trying to guess the world’s most common password list, rockyou.txt in a familiar form factor 
+                                </li>
+                                <li>
+                                Created custom authentication layer including authentication middleware, persistent sessions and secure password storage
+                                </li>
+                                <li>
+                                Implemented a suite of backend endpoints for the creation and authentication of users, the creation of new “password puzzles”, the submission of guesses and more while hiding the sensitive user and puzzle information 
+                                </li>
+                                <li>
+                                Optimizied the search of new password puzzles from a pool of over 14 million possible passwords  
+                                </li>
+                            </ul>
+                        </div>}
+                        animate={true}
+                        />
+                    <Link href="https://github.com/GenerateNU/snapper">
+                        <InfoCard
+                        title={"Snapper: A Social Platform to Connect Marine-Enthusiasts Around the World"}
+                        subHeading={"Typesript, React Native, Tailwind, MongoDB, Figma, Supabase, Docker"}
+                        bodyText={
+                        <div className="w-full h-full items-center justify-center">
+                            <ul className="list-disc p-4">
+                                <li>
+                                Contributed to the front-end component library by developing extensible react native components which enabled user friendly, functionality across the platform 
+                                </li>
+                                <li>
+                                Leveraged an s3 bucket alongside a backend pipeline to associate user submitted images with a public facing link to effectively utilize database storage and simplify image retrieval 
+                                </li>
+                                <li>
+                                Developed CRUD endpoints for users’ dive posts to enable users to share relevant information about their dives 
+                                </li>
+                                <li>
+                                Implemented and optimized fuzzy search on thousands of marine species availabile in our database  
+                                </li>
+                                <li>
+                                  Designed and implemented user flows for the creation of dive posts for user profiles
+                                </li>
+                            </ul>
+                        </div>}
+                        optionalJSX={<Image src='/snapper designs.svg' alt='An image of the designs for the project, Snapper' width={400} height={400} />}
+                        animate={true}
+                        />
+                    </Link>
                     <InfoCard
                         title={"YCSB+T: Database Performance Benchmarking*"}
                         subHeading={"MongoDB, FoundationDB, Amazon Web Services, Object Oriented Design"}
