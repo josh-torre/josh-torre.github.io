@@ -21,7 +21,7 @@ export default function llmsInCS() {
               <h2 className="font-bold text-2xl pl-2">Preface</h2>
                 <p className={standardParaStyle}>
                 These are the thoughts, ideas, interpretations, and perceptions that I have about this topic at the time of writing (December 2024). I have noticed that every 3-5 years I have major shifts in what I believe to be true. For example, just 3 years ago I had the opinion that Java was the best programming language. I have since matured and no longer share this sentiment with my past self
-                <a className="text-my-lighter-teal" target="_blank" href="https://www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683?ie=UTF8&s=books&qid=1223917599&sr=1-1"> (see Joshua Block’s apology for Java's APIs)</a>
+                <a className="text-my-lighter-teal" target="_blank" href="https://www.amazon.com/Effective-Java-2nd-Joshua-Bloch/dp/0321356683?ie=UTF8&s=books&qid=1223917599&sr=1-1"> (see Joshua Block&apos;s apology for Java's APIs)</a>
                 . All this to say: this is what I believe now and is not necessarily what I will always think. Over the coming years, I will hopefully mature as a teacher, software developer, and human being, so my beliefs are not static, but an extensible model to be iterated upon.  
                 </p>
               </div>
