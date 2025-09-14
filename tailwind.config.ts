@@ -8,28 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-
-      },
-      keyframes: {
-        blink: {
-          '0%, 100%': { borderColor: 'transparent' },
-          '50%': { borderColor: 'white' },
-        }
-      },
-      animation: {
-        blink: 'blink 1s ease-in-out infinite',
-      },
+      backgroundImage: {},
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        mono: ["JetBrains Mono", "monospace"],
       },
-      colors: {
-        'my-white': '#FFFFFF',
-        'my-dark-blue': '#04253A',
-        'my-tan': '#FFDDBF',
-        'my-teal': '#4C837A',
-        'my-lighter-teal': '#6ac5b6'
-      }
+      colors: {},
     },
   },
   plugins: [],
