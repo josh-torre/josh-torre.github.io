@@ -1,0 +1,410 @@
+# ==============================================================================
+# ROBOTS.TXT - COMPREHENSIVE ACCESS RESTRICTION
+# ==============================================================================
+# All content on this website is protected. No automated access, scraping,
+# crawling, indexing, training, translation, reproduction, or derivative
+# works are permitted without express written permission from the owner.
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# BLOCK ALL ROBOTS BY DEFAULT
+# ------------------------------------------------------------------------------
+User-agent: *
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# AI TRAINING / LARGE LANGUAGE MODEL CRAWLERS
+# ------------------------------------------------------------------------------
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: meta-externalfetcher
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: cohere-training-data-crawler
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Perplexity-User
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: AI2Bot
+Disallow: /
+
+User-agent: AI2Bot-Dolma
+Disallow: /
+
+User-agent: Ai2Bot-Dolma
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: iaskspider
+Disallow: /
+
+User-agent: ISSCyberRiskCrawler
+Disallow: /
+
+User-agent: Kangaroo Bot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: VelenPublicWebCrawler
+Disallow: /
+
+User-agent: Webzio-Extended
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+User-agent: Sidetrade indexer bot
+Disallow: /
+
+User-agent: sentibot
+Disallow: /
+
+User-agent: magpie-crawler
+Disallow: /
+
+User-agent: FriendlyCrawler
+Disallow: /
+
+User-agent: icc-crawler
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: facebookexternalhit
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# SEARCH ENGINE CRAWLERS (Blocked for comprehensive protection)
+# Uncomment specific entries if you want search engine indexing
+# ------------------------------------------------------------------------------
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot-Video
+Disallow: /
+
+User-agent: Googlebot-News
+Disallow: /
+
+User-agent: Storebot-Google
+Disallow: /
+
+User-agent: Google-InspectionTool
+Disallow: /
+
+User-agent: GoogleOther
+Disallow: /
+
+User-agent: GoogleOther-Image
+Disallow: /
+
+User-agent: GoogleOther-Video
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: BingPreview
+Disallow: /
+
+User-agent: msnbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Sogou
+Disallow: /
+
+User-agent: Exabot
+Disallow: /
+
+User-agent: facebot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# SEO / ANALYTICS / MARKETING CRAWLERS
+# ------------------------------------------------------------------------------
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: MegaIndex
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+User-agent: serpstatbot
+Disallow: /
+
+User-agent: PiplBot
+Disallow: /
+
+User-agent: linkdexbot
+Disallow: /
+
+User-agent: Rogerbot
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# ARCHIVE / CACHE CRAWLERS
+# ------------------------------------------------------------------------------
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: Archive-It
+Disallow: /
+
+User-agent: special_archiver
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# GENERIC / MISCELLANEOUS SCRAPERS
+# ------------------------------------------------------------------------------
+User-agent: wget
+Disallow: /
+
+User-agent: curl
+Disallow: /
+
+User-agent: libwww
+Disallow: /
+
+User-agent: Python-urllib
+Disallow: /
+
+User-agent: python-requests
+Disallow: /
+
+User-agent: Go-http-client
+Disallow: /
+
+User-agent: Java
+Disallow: /
+
+User-agent: HttpClient
+Disallow: /
+
+User-agent: node-fetch
+Disallow: /
+
+User-agent: axios
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: EmailCollector
+Disallow: /
+
+User-agent: EmailSiphon
+Disallow: /
+
+User-agent: EmailWolf
+Disallow: /
+
+User-agent: ExtractorPro
+Disallow: /
+
+User-agent: Harvest
+Disallow: /
+
+User-agent: NetMechanic
+Disallow: /
+
+User-agent: WebBandit
+Disallow: /
+
+User-agent: WebAuto
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# TRANSLATION SERVICES (Blocked - no translation without permission)
+# ------------------------------------------------------------------------------
+User-agent: Twitterbot
+Disallow: /
+
+User-agent: LinkedInBot
+Disallow: /
+
+User-agent: Slackbot
+Disallow: /
+
+User-agent: Discordbot
+Disallow: /
+
+User-agent: TelegramBot
+Disallow: /
+
+User-agent: WhatsApp
+Disallow: /
+
+# ------------------------------------------------------------------------------
+# ADDITIONAL KNOWN BOTS
+# ------------------------------------------------------------------------------
+User-agent: Applebot
+Disallow: /
+
+User-agent: PaperLiBot
+Disallow: /
+
+User-agent: Grapeshot
+Disallow: /
+
+User-agent: NewsNow
+Disallow: /
+
+User-agent: proximic
+Disallow: /
+
+# ==============================================================================
+# LEGAL NOTICE
+# ==============================================================================
+# This robots.txt file is a formal notice that:
+#
+# 1. NO SCRAPING: Automated collection, harvesting, or scraping of any content
+#    from this website is strictly prohibited without express written permission.
+#
+# 2. NO AI TRAINING: Use of any content from this website for training,
+#    fine-tuning, or developing machine learning models, artificial intelligence
+#    systems, large language models (LLMs), or any derivative AI technologies
+#    is strictly prohibited without express written permission.
+#
+# 3. NO TRANSLATION: Automated or bulk translation of content from this website
+#    is prohibited without express written permission.
+#
+# 4. NO REPRODUCTION: Copying, reproducing, or creating derivative works from
+#    content on this website is prohibited without express written permission.
+#
+# 5. NO INDEXING: Indexing of this website content for any purpose is
+#    prohibited without express written permission.
+#
+# 6. NO CACHING: Storing cached copies of this website's content is prohibited
+#    without express written permission.
+#
+# Violation of these terms may result in legal action.
+#
+# For permissions, please contact the website owner.
+# ==============================================================================
+
+# No sitemap provided - intentionally omitted
+# Sitemap: none
