@@ -9,27 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-
+        "gradient-radial": "radial-gradient(circle, var(--tw-gradient-stops))",
       },
       keyframes: {
         blink: {
-          '0%, 100%': { borderColor: 'transparent' },
-          '50%': { borderColor: 'white' },
-        }
+          "0%, 100%": { borderColor: "transparent" },
+          "50%": { borderColor: "white" },
+        },
       },
       animation: {
-        blink: 'blink 1s ease-in-out infinite',
+        blink: "blink 1s ease-in-out infinite",
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        sans: ["Inter", "sans-serif"],
       },
       colors: {
-        'my-white': '#FFFFFF',
-        'my-dark-blue': '#04253A',
-        'my-tan': '#FFDDBF',
-        'my-teal': '#4C837A',
-        'my-lighter-teal': '#6ac5b6'
-      }
+        "pastel-teal": "#4A9B7F",
+        "pastel-orange": "#D97B5C",
+        "pastel-blue": "#5A7FB8",
+        "deep-blue": "#0f1d30",
+      },
     },
   },
   plugins: [],
