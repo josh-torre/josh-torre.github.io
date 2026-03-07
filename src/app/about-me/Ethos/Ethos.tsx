@@ -30,22 +30,19 @@ export const Ethos = () => {
 
       <div className="w-[80%] max-w-3xl space-y-6 text-lg leading-relaxed">
         <p>
-          These values shape how I approach my decision making process. While
-          all are important to me, a few stand out to me.
+          These values guide how I work and collaborate with others. A few stand out in particular.
         </p>
         <p>
           Above all else, I value people. Without them, there is no product, no
-          project, no feature, worth working on. I strive to build impactful
-          software that has a positive impact on those around me whether its my
-          friends in another department, or end users around the world.
+          project, no feature, worth working on. I strive to build meaningful software that positively affects those around me
+          whether it's friends in another department, or end users around the world.
         </p>
 
         <p>
-          I also value curiosity in myself and others (which is why I love being
-          a TA). I believe the best learning happens through genuine questions
-          and collaborative exploration. When someone asks a question because
-          they truly want to understand, I get excited to break it down in a way
-          that clicks for them.
+          I also value curiosity in myself and others. I believe the best learning
+          happens through genuine questions and collaborative exploration.
+          When someone asks a question because they truly want to understand,
+          I get excited to break it down in a way that clicks for them.
         </p>
       </div>
     </div>

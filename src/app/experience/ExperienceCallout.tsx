@@ -6,7 +6,6 @@ interface CalloutProps {
   title: string;
   text: string;
   isLeft: boolean;
-  isVisible: boolean;
   bgColor: string;
   fontColor: string;
 }
@@ -16,23 +15,15 @@ export const Callout = ({
   title,
   text,
   isLeft,
-  isVisible,
   bgColor,
   fontColor,
 }: CalloutProps) => {
   return (
     <div
-      className={`hidden md:block absolute top-20 transition-all duration-700 ${
-        isLeft
-          ? "left-[calc(50%+3rem)] pl-12 flex justify-start"
-          : "right-[calc(50%+3rem)] pr-12 flex justify-end"
-      }`}
-      style={{
-        width: "calc(50% - 5rem)",
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translateY(0)" : "translateY(20px)",
-        transitionDelay: isVisible ? "500ms" : "0ms",
-      }}
+      className={`hidden md:block absolute top-20 transition-all duration-700 ${isLeft
+        ? "left-[calc(50%+3rem)] pl-12 flex justify-start"
+        : "right-[calc(50%+3rem)] pr-12 flex justify-end"
+        }`}
     >
       <div
         className={`relative rounded-[24px] p-5 shadow-[#1A1A1A] shadow-lg overflow-hidden ${bgColor}`}
@@ -40,9 +31,8 @@ export const Callout = ({
         <GrainOverlay />
         <div className="relative z-10">
           <div
-            className={`flex flex-row items-center gap-2 ${fontColor} font-semibold mb-2 ${
-              isLeft ? "justify-start" : "justify-end"
-            }`}
+            className={`flex flex-row items-center gap-2 ${fontColor} font-semibold mb-2 ${isLeft ? "justify-start" : "justify-end"
+              }`}
           >
             {isLeft ? (
               <>

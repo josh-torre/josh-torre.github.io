@@ -8,42 +8,36 @@ import Callout from "./ExperienceCallout";
 interface TimelineItemProps {
   experience: Experience;
   index: number;
-  isVisible: boolean;
 }
 
-export const TimelineItem = forwardRef<HTMLDivElement, TimelineItemProps>(
-  ({ experience, index, isVisible }, ref) => {
-    const isLeft = index % 2 === 0;
+export const TimelineItem = ({ experience, index }: TimelineItemProps) => {
+  const isLeft = index % 2 === 0;
 
-    return (
-      <div ref={ref} className="relative">
-        <TimelineNode isVisible={isVisible} />
-        <TimelineNode isVisible={isVisible} isMobile />
+  return (
+    <div className="relative">
+      <TimelineNode />
+      <TimelineNode isMobile />
 
-        <TimelineDateLabel
-          startDate={experience.startDate}
-          endDate={experience.endDate}
-          isVisible={isVisible}
-        />
+      <TimelineDateLabel
+        startDate={experience.startDate}
+        endDate={experience.endDate}
+      />
 
-        {experience.callout && (
-          <Callout
-            icon={experience.callout.icon}
-            title={experience.callout.title}
-            text={experience.callout.text}
-            isLeft={isLeft}
-            isVisible={isVisible}
-            bgColor="bg-deep-blue"
-            fontColor="text-pastel-blue"
-          />
-        )}
-
-        <ExperienceCard
-          experience={experience}
+      {experience.callout && (
+        <Callout
+          icon={experience.callout.icon}
+          title={experience.callout.title}
+          text={experience.callout.text}
           isLeft={isLeft}
-          isVisible={isVisible}
+          bgColor="bg-deep-blue"
+          fontColor="text-pastel-blue"
         />
-      </div>
-    );
-  }
-);
+      )}
+
+      <ExperienceCard
+        experience={experience}
+        isLeft={isLeft}
+      />
+    </div>
+  );
+}

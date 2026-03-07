@@ -3,13 +3,11 @@ import { Experience } from "./types";
 interface ExperienceCardProps {
   experience: Experience;
   isLeft: boolean;
-  isVisible: boolean;
 }
 
 export const ExperienceCard = ({
   experience,
   isLeft,
-  isVisible,
 }: ExperienceCardProps) => {
   const { title, company, location, startDate, endDate, logo, description } =
     experience;
@@ -17,16 +15,8 @@ export const ExperienceCard = ({
 
   return (
     <div
-      className={`md:w-[calc(50%-3rem)] transition-all duration-700 ${
-        isLeft ? "md:mr-auto md:pr-16" : "md:ml-auto md:pl-16"
-      } ml-16 md:ml-0`}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible
-          ? "translateX(0)"
-          : `translateX(${isLeft ? "-50px" : "50px"})`,
-        transitionDelay: isVisible ? "300ms" : "0ms",
-      }}
+      className={`md:w-[calc(50%-3rem)] transition-all duration-700 ${isLeft ? "md:mr-auto md:pr-16" : "md:ml-auto md:pl-16"
+        } ml-16 md:ml-0`}
     >
       <div className="bg-neutral-800 rounded-2xl p-6 border border-neutral-700 shadow-xl hover:shadow-2xl hover:border-neutral-600 transition-all duration-300">
         <div className="flex items-start gap-4 mb-4">
@@ -59,13 +49,6 @@ export const ExperienceCard = ({
           ))}
         </ul>
       </div>
-
-      <div
-        className={`hidden md:block absolute top-8 w-12 h-0.5 bg-neutral-700 transition-opacity duration-500 ${
-          isVisible ? "opacity-100" : "opacity-0"
-        } ${isLeft ? "right-0" : "left-0"}`}
-        style={{ transitionDelay: isVisible ? "400ms" : "0ms" }}
-      />
     </div>
   );
 };

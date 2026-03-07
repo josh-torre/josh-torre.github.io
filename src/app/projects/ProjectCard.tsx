@@ -2,20 +2,16 @@ import { Project } from "./types";
 
 interface ProjectCardProps {
   project: Project;
-  isVisible: boolean;
   index: number;
 }
 
 export const ProjectCard = ({
   project,
-  isVisible,
   index,
 }: ProjectCardProps) => {
   return (
     <div
-      className={`relative group transition-all duration-700 ease-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
-      }`}
+      className="relative group transition-all duration-700 ease-out"
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       <div

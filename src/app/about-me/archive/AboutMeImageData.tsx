@@ -21,7 +21,7 @@ export const aboutMeImages: ImageItem[] = [
             research completed
             <IconExternalLink size={20} className="inline" />
           </a>{" "}
-          with Professor Daniel Patterson, we were invited to the 2025 ITICSE
+          with Professor Daniel Patterson, I presented at the 2025 ITICSE
           conference in Nijmegen, Netherlands. I took this opportunity to meet
           other educators as well as explore Europe for the first time.
         </p>
@@ -41,7 +41,7 @@ export const aboutMeImages: ImageItem[] = [
           My work with Kubera health enabled me to relocate to New York and
           allowed me to explore the city in my free time. While there is a lot
           to love in the city, my favorite thing to do was to walk the Manhattan
-          bridge(pictured here) to Chinatown to pick up some cheap eats.
+          Bridge (pictured here) to Chinatown to pick up some cheap eats.
         </p>
       </>
     ),
@@ -75,12 +75,12 @@ export const aboutMeImages: ImageItem[] = [
     date: new Date("2025-06-01"),
     description: (
       <>
-        <p className="text-sm text-neutral-300">
+        <p>
           From humble beginnings, this was the Kubera Health office during my
           time in New York. This is where we hunkered down through many late
           nights to complete last-minute features and fuel ourselves on far too
           much coffee. At roughly the size of a typical NYC apartment, we
-          quickly became a close knit team.
+          quickly became a close-knit team.
         </p>
       </>
     ),
@@ -94,7 +94,7 @@ export const aboutMeImages: ImageItem[] = [
     date: new Date("2025-11-22"),
     description: (
       <>
-        <p className="text-sm text-neutral-300">
+        <p>
           After many late nights building Prisere, our Generate team took a
           weekend off to explore Portsmouth, New Hampshire and Southern Maine.
           We even caught pictures with these celebrities on the way 👀
@@ -134,9 +134,9 @@ export const aboutMeImages: ImageItem[] = [
       <>
         <p>
           With a seed round of funding raised, the team at Kubera Health was
-          able to get an office upgrade! This time, featuring windows! The
-          location changed, but our caffeine habit didn't! The cups followed us
-          to our new desks.
+          able to get an office upgrade. This time, featuring windows! The
+          location changed, but our caffeine habit didn't! As you can see in the picture,
+          the coffee cups followed us to our new desks.
         </p>
       </>
     ),

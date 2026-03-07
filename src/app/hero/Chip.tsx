@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { GrainOverlay } from "../core-components/GrainOverlay";
 import "./hero-animations.css";
 
@@ -20,34 +21,38 @@ export const Chip = ({
   left,
   animation,
   delay,
-  textSize = "text-3xl",
+  textSize = "text-lg sm:text-2xl md:text-3xl",
   startingOpacity = 0,
   startingZIdx = 0,
-}: ChipProps) => (
-  <div
-    className={`relative w-fit h-16 rounded-[32px] flex justify-center items-center shadow-[#1A1A1A] shadow-lg overflow-hidden select-none ${color}`}
-    style={{
-      top,
-      left,
-      position: top || left ? "absolute" : "relative",
-      animation: animation
-        ? `${animation} 2s cubic-bezier(0.4, 0, 0.2, 1) ${
-            delay || "0s"
-          } forwards`
-        : undefined,
-      opacity: startingOpacity,
-      zIndex: startingZIdx,
-      // Add will-change for GPU acceleration hints
-      willChange: animation ? "transform, opacity" : undefined,
-      // Prevent subpixel rendering issues
-      backfaceVisibility: "hidden",
-    }}
-  >
-    <GrainOverlay />
-    <p
-      className={`p-6 text-center text-white ${textSize} whitespace-nowrap relative z-10`}
+}: ChipProps) => {
+  const innerRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div
+      style={{
+        top,
+        left,
+        position: top || left ? "absolute" : "relative",
+        animation: animation
+          ? `${animation} 2s cubic-bezier(0.4, 0, 0.2, 1) ${delay || "0s"} forwards`
+          : undefined,
+        opacity: startingOpacity,
+        zIndex: startingZIdx,
+        willChange: animation ? "transform, opacity" : undefined,
+        backfaceVisibility: "hidden",
+      }}
     >
-      {label}
-    </p>
-  </div>
-);
+      <div
+        ref={innerRef}
+        className={`relative w-fit h-10 sm:h-12 md:h-16 rounded-[32px] flex justify-center items-center shadow-[#1A1A1A] shadow-lg overflow-hidden select-none ${color}`}
+      >
+        <GrainOverlay />
+        <p
+          className={`px-4 sm:px-5 md:px-6 text-center text-white ${textSize} whitespace-nowrap relative z-10`}
+        >
+          {label}
+        </p>
+      </div>
+    </div>
+  );
+};

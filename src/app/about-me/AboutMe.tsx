@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement, useState } from "react";
 import { ArchiveContent } from "./archive/ArchiveContent";
 import { Ethos } from "./Ethos/Ethos";
 import {
@@ -7,21 +7,49 @@ import {
   IconCode,
   IconSend,
   IconUserHeart,
+  IconArrowLeft,
 } from "@tabler/icons-react";
 import { ContactContent } from "./Contact";
 import SkillsSection from "./Skills";
 import MusicContent from "./music/MusicContent";
+import BentoCard from "./BentoCard";
 
 const sections = [
-  { id: "archive", label: "Archive", icon: <IconArchive size={20} /> },
-  { id: "ethos", label: "Ethos", icon: <IconUserHeart size={20} /> },
-  { id: "music", label: "Music", icon: <IconBrandSpotify size={20} /> },
   {
     id: "contact",
     label: "Contact",
-    icon: <IconSend size={20} />,
+    description: "Get in touch with me",
+    icon: <IconSend />,
+    span: "col-span-2 sm:col-span-2",
   },
-  { id: "skills", label: "Skills", icon: <IconCode size={20} /> },
+  {
+    id: "archive",
+    label: "Archive",
+    description: "More about me! See where I've been and the stories that led me here",
+    icon: <IconArchive />,
+    span: "col-span-2 sm:col-span-2",
+  },
+  {
+    id: "music",
+    label: "Music",
+    description: "What I'm listening to and loving",
+    icon: <IconBrandSpotify />,
+    span: "col-span-2 sm:col-span-1",
+  },
+  {
+    id: "ethos",
+    label: "Ethos",
+    description: "What I believe in and how I work",
+    icon: <IconUserHeart />,
+    span: "col-span-2 sm:col-span-2",
+  },
+  {
+    id: "skills",
+    label: "Skills",
+    description: "Technologies and tools I use",
+    icon: <IconCode />,
+    span: "col-span-2 sm:col-span-1",
+  },
 ];
 
 const contentMap: Record<string, ReactElement> = {
@@ -33,70 +61,53 @@ const contentMap: Record<string, ReactElement> = {
 };
 
 export default function AboutMe() {
-  const [activeSection, setActiveSection] = useState("archive");
+  const [activeSection, setActiveSection] = useState<string | null>(null);
+  const [visited, setVisited] = useState<Set<string>>(new Set());
 
-  useEffect(() => {
-    const handleHashChange = () => {
-      const hash = window.location.hash;
-      const match = hash.match(/^#about-me-(\w+)$/);
-      if (match && sections.some((s) => s.id === match[1])) {
-        setActiveSection(match[1]);
-        document.getElementById("about-me")?.scrollIntoView();
-      }
-    };
-
-    handleHashChange();
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
-  }, []);
-
-  const handleTabClick = (sectionId: string) => {
+  const handleSelect = (sectionId: string) => {
     setActiveSection(sectionId);
-    window.location.hash = `about-me-${sectionId}`;
+    setVisited((prev) => new Set(prev).add(sectionId));
+  };
+
+  const handleBack = () => {
+    setActiveSection(null);
   };
 
   return (
     <section id="about-me" className="px-4">
-      <div className="max-w-[65vw] mx-auto pb-20">
-        <h2 className="text-4xl font-medium text-center mb-12 text-white">
+      <div className="max-w-full md:max-w-[90vw] lg:max-w-[65vw] mx-auto pb-20">
+        <h2 className="text-3xl sm:text-4xl font-medium text-center mb-8 sm:mb-12 text-white">
           About Me
         </h2>
 
-        <div className="relative">
-          <div className="flex items-end gap-0.5 relative z-10">
-            {sections.map((section, index) => {
-              const isActive = activeSection === section.id;
-              return (
-                <button
+        {activeSection === null ? (
+          <div className="min-h-[400px] sm:min-h-[500px] md:min-h-[550px] flex items-center justify-center">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 w-full auto-rows-fr">
+              {sections.map((section) => (
+                <BentoCard
                   key={section.id}
-                  onClick={() => handleTabClick(section.id)}
-                  style={{ zIndex: isActive ? 20 : 10 - index }}
-                  className={`
-                    relative flex items-center gap-2 px-5 py-3 text-sm
-                    transition-all duration-150 
-                    rounded-t-xl
-                    ${
-                      isActive
-                        ? "bg-neutral-900 text-white border-t border-l border-r border-neutral-700"
-                        : "bg-neutral-800 text-neutral-500 hover:text-neutral-300 border-t border-l border-r border-neutral-800 hover:bg-neutral-750"
-                    }
-                  `}
-                >
-                  <span className="flex-shrink-0">{section.icon}</span>
-                  <span>{section.label}</span>
-                  {isActive && (
-                    <div className="absolute bottom-0 left-0 right-0 h-px bg-neutral-900" />
-                  )}
-                </button>
-              );
-            })}
+                  section={section}
+                  hasVisited={visited.has(section.id)}
+                  onSelect={() => handleSelect(section.id)}
+                />
+              ))}
+            </div>
           </div>
+        ) : (
+          <div>
+            <button
+              onClick={handleBack}
+              className="inline-flex items-center gap-2 text-base text-gray-400 hover:text-gray-200 transition-colors mb-4"
+            >
+              <IconArrowLeft size={18} />
+              <span>Back to About Me</span>
+            </button>
 
-          <div className="bg-neutral-900 border border-neutral-700 rounded-b-xl rounded-tr-xl overflow-hidden h-[550px] p-8">
-            {contentMap[activeSection]!}
+            <div className="flex bg-neutral-800 border border-neutral-700 rounded-3xl shadow-2xl overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[550px] p-8 md:p-12 items-center justify-center">
+              {contentMap[activeSection]!}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

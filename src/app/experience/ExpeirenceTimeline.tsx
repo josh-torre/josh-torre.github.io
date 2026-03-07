@@ -1,39 +1,7 @@
-import { useState, useEffect, useRef } from "react";
 import { experiences } from "./types";
 import { TimelineItem } from "./TimelineItem";
 
 export const WorkHistoryTimeline = () => {
-  const [visibleItems, setVisibleItems] = useState<number[]>([]);
-  const itemRefs = useRef<HTMLDivElement[]>([]);
-
-  useEffect(() => {
-    const observers: IntersectionObserver[] = [];
-
-    itemRefs.current.forEach((ref, index) => {
-      if (!ref) return;
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setVisibleItems((prev) =>
-                prev.includes(index)
-                  ? prev
-                  : [...prev, index].sort((a, b) => a - b)
-              );
-            }
-          });
-        },
-        { threshold: 0.3, rootMargin: "-50px" }
-      );
-
-      observer.observe(ref);
-      observers.push(observer);
-    });
-
-    return () => observers.forEach((o) => o.disconnect());
-  }, []);
-
   return (
     <section id="experience" className="px-4 relative min-h-screen">
       <div className="max-w-6xl mx-auto">
@@ -49,12 +17,8 @@ export const WorkHistoryTimeline = () => {
             {experiences.map((exp, index) => (
               <TimelineItem
                 key={exp.company}
-                ref={(el) => {
-                  if (el) itemRefs.current[index] = el;
-                }}
                 experience={exp}
                 index={index}
-                isVisible={visibleItems.includes(index)}
               />
             ))}
           </div>
