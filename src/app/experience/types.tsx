@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
       "Delivered solutions for 200+ full-stack bugs and features by translating business requirements into React components, TRPC endpoints, PostgreSQL schemas and data pipelines while considering user and technical constraints",
       "Led the development of a contract scenario modeler, giving healthcare providers historical insights, unlocking a new revenue stream for the company",
       "Implemented a compliance system for service rate change history to enable training of AI models",
-      "Designed and manage AWS Cloud infrastructure for feature implementation and incident response",
+      "Designed and managed AWS Cloud infrastructure for feature implementation and incident response",
       "Leveraged AI development tools like Claude Code, Cursor and Devin AI to accelerate feature delivery and iteration speed",
     ],
   },
