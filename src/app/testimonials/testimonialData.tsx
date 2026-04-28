@@ -1,7 +1,7 @@
 export const testimonials = [
   {
     quote:
-      "He[Josh] possess a rare ability to communicate intricate ideas with simplicity and precision, ensuring everyone is on the same page. This talent ensures alignment across various stakeholders, from peers to top-tier executives.",
+      "He[Josh] possesses a rare ability to communicate intricate ideas with simplicity and precision, ensuring everyone is on the same page. This talent ensures alignment across various stakeholders, from peers to top-tier executives.",
     name: "Kevin Gibbs",
     title: "Business Process Analyst",
     image: "testimonials/kevin-gibbs.jpeg",

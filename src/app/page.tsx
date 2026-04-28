@@ -2,9 +2,9 @@
 import { NavBar } from "./nav-bar/NavBar";
 import { HeroSection } from "./hero/HeroSection";
 import TestimonialSection from "./testimonials/testimonials";
-import { WorkHistoryTimeline } from "./experience/ExpeirenceTimeline";
+import { WorkHistoryTimeline } from "./experience/ExperienceTimeline";
 import ProjectsSection from "./projects/ProjectsContainer";
-import AboutMe from "./about-me/AboutMe";
+import AboutMe from "./about-me/About/AboutMe";
 
 const Main = () => {
   return (

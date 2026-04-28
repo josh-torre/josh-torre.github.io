@@ -50,7 +50,7 @@ export const ContactContent = () => {
         >
           <IconMail size={60} />
           <p className="text-xl pt-2">
-            {copied ? "Copied!" : "My email"} <br />
+            {copied ? "Copied!" : "My email"}
           </p>
         </span>
       </div>

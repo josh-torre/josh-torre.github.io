@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GrainOverlay } from "../core-components/GrainOverlay";
 import "./hero-animations.css";
 
@@ -26,6 +26,15 @@ export const Chip = ({
   startingZIdx = 0,
 }: ChipProps) => {
   const innerRef = useRef<HTMLDivElement>(null);
+  const isAnimated = !!animation;
+
+  const [isInFront, setIsInFront] = useState(false);
+  useEffect(() => {
+    if (!isAnimated) return;
+    const delayMs = parseFloat(delay ?? "0") * 1000;
+    const id = setTimeout(() => setIsInFront(true), delayMs + 800);
+    return () => clearTimeout(id);
+  }, [isAnimated, delay]);
 
   return (
     <div
@@ -33,13 +42,13 @@ export const Chip = ({
         top,
         left,
         position: top || left ? "absolute" : "relative",
-        animation: animation
-          ? `${animation} 2s cubic-bezier(0.4, 0, 0.2, 1) ${delay || "0s"} forwards`
+        animation: isAnimated
+          ? `${animation} 2s cubic-bezier(0.4, 0, 0.2, 1) ${delay ?? "0s"} both`
           : undefined,
-        opacity: startingOpacity,
-        zIndex: startingZIdx,
-        willChange: animation ? "transform, opacity" : undefined,
-        backfaceVisibility: "hidden",
+
+        zIndex: isAnimated ? (isInFront ? 40 : 20) : startingZIdx,
+        opacity: isAnimated ? undefined : startingOpacity,
+        willChange: isAnimated ? "transform, opacity" : undefined,
       }}
     >
       <div

@@ -18,7 +18,7 @@ export const projectData: Project[] = [
     id: 1,
     title: "Prisere",
     description:
-      "Prisere is a disaster response platform designed for small to medium sized businesses to react to registered FEMA Natural Disasters. The platform is connected with Quickbooks to allow for streamlined processes and faster claim submission.",
+      "Prisere is a disaster response platform designed for small to medium-sized businesses to react to registered FEMA Natural Disasters. The platform is connected with Quickbooks to allow for streamlined processes and faster claim submission.",
     tags: [
       "TypeScript",
       "PostgreSQL",
@@ -45,7 +45,7 @@ export const projectData: Project[] = [
     id: 2,
     title: "Dearly",
     description:
-      "Dearly is a social platform for extended families to share their private moments. Invite only groups can be created for families where users can select their technical proficiency and interact with a UI that matches their technical ability; so everyone can contribute to the conversation.",
+      "Dearly is a social platform for extended families to share their private moments. Invite-only groups can be created for families where users can select their technical proficiency and interact with a UI that matches their technical ability; so everyone can contribute to the conversation.",
     tags: [
       "TypeScript",
       "PostgreSQL",

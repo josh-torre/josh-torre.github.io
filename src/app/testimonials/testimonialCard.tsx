@@ -46,7 +46,7 @@ export const TestimonialCard = ({
 
           <div className="flex-1">
             <p className="text-xl md:text-2xl text-gray-200 leading-relaxed mb-6 italic">
-              "{testimonial.quote}"
+              &ldquo;{testimonial.quote}&rdquo;
             </p>
             <div className="border-t border-neutral-600 pt-4">
               <div className="flex flex-row gap-4 items-center align-center">

@@ -1,6 +1,6 @@
 import { testimonials } from "./testimonialData";
 import { useScrollTestimonials } from "./useTestimonialScroll";
-import { TestimonialCard } from "./testimonalCard";
+import { TestimonialCard } from "./testimonialCard";
 
 const TestimonialSection = () => {
   const { currentTestimonialIdx, progress, testimonialRef } =

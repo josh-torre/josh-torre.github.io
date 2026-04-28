@@ -1,4 +1,4 @@
-import { experiences } from "./types";
+import { experiences } from "./experienceTypes";
 import { TimelineItem } from "./TimelineItem";
 
 export const WorkHistoryTimeline = () => {
@@ -15,11 +15,7 @@ export const WorkHistoryTimeline = () => {
 
           <div className="space-y-16">
             {experiences.map((exp, index) => (
-              <TimelineItem
-                key={exp.company}
-                experience={exp}
-                index={index}
-              />
+              <TimelineItem key={exp.company} experience={exp} index={index} />
             ))}
           </div>
         </div>

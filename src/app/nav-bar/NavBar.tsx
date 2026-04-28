@@ -8,7 +8,9 @@ interface NavBarProps {
 
 export const NavBar = ({ selectedSection }: NavBarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeItem, setActiveItem] = useState<string | null>(null);
+  const [detectedActiveItem, setDetectedActiveItem] = useState<string | null>(null);
+  const activeItem =
+    selectedSection !== undefined ? selectedSection || null : detectedActiveItem;
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navItems = ["Testimonials", "Experience", "Projects", "About Me"];
   const visibleSections = useRef<Set<string>>(new Set());
@@ -43,11 +45,11 @@ export const NavBar = ({ selectedSection }: NavBarProps) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               visibleSections.current.add(id);
-              setActiveItem(navItems[index]);
+              setDetectedActiveItem(navItems[index]);
             } else {
               visibleSections.current.delete(id);
               if (visibleSections.current.size === 0) {
-                setActiveItem(null);
+                setDetectedActiveItem(null);
               }
             }
           });
@@ -62,12 +64,6 @@ export const NavBar = ({ selectedSection }: NavBarProps) => {
       visibleSections.current.clear();
     };
   }, []);
-
-  useEffect(() => {
-    if (selectedSection !== undefined) {
-      setActiveItem(selectedSection || null);
-    }
-  }, [selectedSection]);
 
   if (
     selectedSection &&

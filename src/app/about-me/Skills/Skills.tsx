@@ -41,7 +41,7 @@ export default function SkillsSection() {
   technologies.sort((a, b) => (b.rank || 0) - (a.rank || 0));
 
   return (
-    <div className=" text-white p-8">
+    <div className="text-white p-8">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center">
           <span className="text-3xl text-white">
@@ -49,7 +49,7 @@ export default function SkillsSection() {
           </span>
 
           <div
-            className={`mt-2  rounded-lg overflow-scroll transition-all max-h-[400px]`}
+            className="mt-2 rounded-lg overflow-auto transition-all max-h-[400px]"
           >
             <div className="p-6 flex flex-wrap">
               {technologies.map((icon) => (

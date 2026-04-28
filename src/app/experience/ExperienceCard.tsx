@@ -1,22 +1,20 @@
-import { Experience } from "./types";
+import { Experience } from "./experienceTypes";
 
 interface ExperienceCardProps {
   experience: Experience;
   isLeft: boolean;
 }
 
-export const ExperienceCard = ({
-  experience,
-  isLeft,
-}: ExperienceCardProps) => {
+export const ExperienceCard = ({ experience, isLeft }: ExperienceCardProps) => {
   const { title, company, location, startDate, endDate, logo, description } =
     experience;
   const dateText = `${startDate} - ${endDate || "Present"}`;
 
   return (
     <div
-      className={`md:w-[calc(50%-3rem)] transition-all duration-700 ${isLeft ? "md:mr-auto md:pr-16" : "md:ml-auto md:pl-16"
-        } ml-16 md:ml-0`}
+      className={`md:w-[calc(50%-3rem)] transition-all duration-700 ${
+        isLeft ? "md:mr-auto md:pr-16" : "md:ml-auto md:pl-16"
+      } ml-16 md:ml-0`}
     >
       <div className="bg-neutral-800 rounded-2xl p-6 border border-neutral-700 shadow-xl hover:shadow-2xl hover:border-neutral-600 transition-all duration-300">
         <div className="flex items-start gap-4 mb-4">

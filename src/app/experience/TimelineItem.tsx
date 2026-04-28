@@ -1,5 +1,4 @@
-import { forwardRef } from "react";
-import { Experience } from "./types";
+import { Experience } from "./experienceTypes";
 import { TimelineNode } from "./TimelineNode";
 import { TimelineDateLabel } from "./TimelineDate";
 import { ExperienceCard } from "./ExperienceCard";
@@ -34,10 +33,7 @@ export const TimelineItem = ({ experience, index }: TimelineItemProps) => {
         />
       )}
 
-      <ExperienceCard
-        experience={experience}
-        isLeft={isLeft}
-      />
+      <ExperienceCard experience={experience} isLeft={isLeft} />
     </div>
   );
-}
+};

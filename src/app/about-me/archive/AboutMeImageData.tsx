@@ -38,7 +38,7 @@ export const aboutMeImages: ImageItem[] = [
     description: (
       <>
         <p>
-          My work with Kubera health enabled me to relocate to New York and
+          My work with Kubera Health enabled me to relocate to New York and
           allowed me to explore the city in my free time. While there is a lot
           to love in the city, my favorite thing to do was to walk the Manhattan
           Bridge (pictured here) to Chinatown to pick up some cheap eats.
@@ -58,7 +58,7 @@ export const aboutMeImages: ImageItem[] = [
         <p>
           Under the great Professor Ian Gorton, I went abroad along with 20
           other students to Sydney, Australia. While in the Sydney area we
-          studied, explored local cuisine, hiked forests of the blue mountains,
+          studied, explored local cuisine, hiked forests of the Blue Mountains,
           visited animals at the zoo and even swam with sharks! It was truly an
           unforgettable month of discovery, growth and excitement.
         </p>
@@ -135,8 +135,9 @@ export const aboutMeImages: ImageItem[] = [
         <p>
           With a seed round of funding raised, the team at Kubera Health was
           able to get an office upgrade. This time, featuring windows! The
-          location changed, but our caffeine habit didn't! As you can see in the picture,
+          location changed, but our caffeine habit didn&apos;t! As you can see in the picture,
           the coffee cups followed us to our new desks.
+
         </p>
       </>
     ),

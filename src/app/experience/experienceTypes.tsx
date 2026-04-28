@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
     ],
   },
   {
-    title: "Teaching Assistant(TA) / Lead TA",
+    title: "Teaching Assistant (TA) / Lead TA",
     company: "Khoury College of Computer Sciences",
     location: "Boston, MA",
     startDate: "Jan 2024",
@@ -51,9 +51,9 @@ export const experiences: Experience[] = [
       text: "Responsible for a team of 15 peers to improve student experiences",
     },
     description: [
-      "Taught 1,000+ students the fundamentals of computer science, software design, object oriented design patterns, and functional programming techniques",
+      "Taught 1,000+ students the fundamentals of computer science, software design, object-oriented design patterns, and functional programming techniques",
       "Led a team of 15 TAs to provide additional tutoring for students in need and measured student progress",
-      'Designed and built a Racket "Universe Server" for the courses\' 500+ students to learn about client, server architecture and to utilize in their summative final project',
+      'Designed and built a Racket "Universe Server" for the courses\' 500+ students to learn about client-server architecture and to utilize in their summative final project',
       "Participated in cross-functional weekly team lead meetings to discuss student progress, align on goals, and resolve any team challenges from the week",
     ],
   },

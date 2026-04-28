@@ -1,124 +1,66 @@
-/* ── Responsive swoop distances ── */
-:root {
-    --swoop1-mid-x: 200%;
-    --swoop1-end-x: 125%;
-    --swoop1-end-y: -5%;
-
-    --swoop2-mid-x: -150%;
-    --swoop2-end-x: -90%;
-    --swoop2-end-y: 5%;
-
-    --swoop3-mid-x: -160%;
-    --swoop3-mid-y: -20%;
-    --swoop3-end-x: -110%;
-    --swoop3-end-y: -25%;
-}
-
-/* Small screens: pull chips closer so they don't overflow */
-@media (max-width: 639px) {
-    :root {
-        --swoop1-mid-x: 140%;
-        --swoop1-end-x: 75%;
-        --swoop1-end-y: -5%;
-
-        --swoop2-mid-x: -100%;
-        --swoop2-end-x: -50%;
-        --swoop2-end-y: 5%;
-
-        --swoop3-mid-x: -110%;
-        --swoop3-mid-y: -15%;
-        --swoop3-end-x: -65%;
-        --swoop3-end-y: -20%;
-    }
-}
-
-/* Medium screens */
-@media (min-width: 640px) and (max-width: 767px) {
-    :root {
-        --swoop1-mid-x: 170%;
-        --swoop1-end-x: 100%;
-        --swoop1-end-y: -5%;
-
-        --swoop2-mid-x: -125%;
-        --swoop2-end-x: -70%;
-        --swoop2-end-y: 5%;
-
-        --swoop3-mid-x: -135%;
-        --swoop3-mid-y: -18%;
-        --swoop3-end-x: -85%;
-        --swoop3-end-y: -22%;
-    }
-}
-
-/* ── Keyframes using CSS custom properties ── */
 @keyframes swoopOut1 {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(0.8);
-        z-index: 0;
-    }
-
-    49.9% {
-        z-index: 0;
-    }
-
-    50% {
-        opacity: 1;
-        transform: translate(var(--swoop1-mid-x), 0) scale(0.9);
-        z-index: 30;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(var(--swoop1-end-x), var(--swoop1-end-y)) scale(1);
-        z-index: 30;
-    }
+  0%   { opacity: 0; transform: translate(0,    0)    scale(0.8); }
+  15%  { opacity: 1; }
+  50%  {             transform: translate(200%,  0)    scale(0.9); }
+  100% { opacity: 1; transform: translate(125%, -5%)  scale(1);   }
 }
 
 @keyframes swoopOut2 {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(0.8);
-        z-index: 0;
-    }
-
-    49.9% {
-        z-index: 0;
-    }
-
-    50% {
-        opacity: 1;
-        transform: translate(var(--swoop2-mid-x), 0) scale(0.9);
-        z-index: 30;
-    }
-
-    100% {
-        opacity: 1;
-        transform: translate(var(--swoop2-end-x), var(--swoop2-end-y)) scale(1);
-        z-index: 30;
-    }
+  0%   { opacity: 0; transform: translate(0,     0)   scale(0.8); }
+  15%  { opacity: 1; }
+  50%  {             transform: translate(-150%,  0)   scale(0.9); }
+  100% { opacity: 1; transform: translate(-90%,   5%) scale(1);   }
 }
 
 @keyframes swoopOut3 {
-    0% {
-        opacity: 1;
-        transform: translate(0, 0) scale(0.8);
-        z-index: 0;
-    }
+  0%   { opacity: 0; transform: translate(0,      0)    scale(0.8); }
+  15%  { opacity: 1; }
+  50%  {             transform: translate(-160%, -20%)  scale(0.9); }
+  100% { opacity: 1; transform: translate(-110%, -25%) scale(1);   }
+}
 
-    49.9% {
-        z-index: 0;
-    }
+@media (min-width: 640px) and (max-width: 767px) {
+  @keyframes swoopOut1 {
+    0%   { opacity: 0; transform: translate(0,    0)    scale(0.8); }
+    15%  { opacity: 1; }
+    50%  {             transform: translate(170%,  0)    scale(0.9); }
+    100% { opacity: 1; transform: translate(100%, -5%)  scale(1);   }
+  }
 
-    50% {
-        opacity: 1;
-        transform: translate(var(--swoop3-mid-x), var(--swoop3-mid-y)) scale(0.9);
-        z-index: 30;
-    }
+  @keyframes swoopOut2 {
+    0%   { opacity: 0; transform: translate(0,     0)   scale(0.8); }
+    15%  { opacity: 1; }
+    50%  {             transform: translate(-125%,  0)   scale(0.9); }
+    100% { opacity: 1; transform: translate(-70%,   5%) scale(1);   }
+  }
 
-    100% {
-        opacity: 1;
-        transform: translate(var(--swoop3-end-x), var(--swoop3-end-y)) scale(1);
-        z-index: 30;
-    }
+  @keyframes swoopOut3 {
+    0%   { opacity: 0; transform: translate(0,      0)    scale(0.8); }
+    15%  { opacity: 1; }
+    50%  {             transform: translate(-135%, -18%)  scale(0.9); }
+    100% { opacity: 1; transform: translate(-85%,  -22%) scale(1);   }
+  }
+}
+
+@media (max-width: 639px) {
+  @keyframes swoopOut1 {
+    0%   { opacity: 0; transform: translate(0,   0)    scale(0.8); }
+    15%  { opacity: 1; }
+    50%  {             transform: translate(140%, 0)    scale(0.9); }
+    100% { opacity: 1; transform: translate(75%, -5%)  scale(1);   }
+  }
+
+  @keyframes swoopOut2 {
+    0%   { opacity: 0; transform: translate(0,    0)   scale(0.8); }
+    15%  { opacity: 1; }
+    50%  {             transform: translate(-100%, 0)   scale(0.9); }
+    100% { opacity: 1; transform: translate(-50%,  5%) scale(1);   }
+  }
+
+  @keyframes swoopOut3 {
+    0%   { opacity: 0; transform: translate(0,     0)    scale(0.8); }
+    15%  { opacity: 1; }
+    50%  {             transform: translate(-110%, -15%)  scale(0.9); }
+    100% { opacity: 1; transform: translate(-65%,  -20%) scale(1);   }
+  }
 }

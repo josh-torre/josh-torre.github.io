@@ -44,7 +44,7 @@ export default function MusicContent() {
                     <span className="text-neutral-500 text-sm">min</span>
                   </div>
                   <div className="text-neutral-400 text-sm">
-                    that's{" "}
+                    that&apos;s{" "}
                     <span className="text-white font-semibold">
                       {item.days}
                     </span>{" "}

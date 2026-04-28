@@ -1,6 +1,6 @@
-import { ReactElement, useState } from "react";
-import { ArchiveContent } from "./archive/ArchiveContent";
-import { Ethos } from "./Ethos/Ethos";
+import React, { useState } from "react";
+import { ArchiveContent } from "../archive/ArchiveContent";
+import { Ethos } from "../Ethos/Ethos";
 import {
   IconArchive,
   IconBrandSpotify,
@@ -9,10 +9,10 @@ import {
   IconUserHeart,
   IconArrowLeft,
 } from "@tabler/icons-react";
-import { ContactContent } from "./Contact";
-import SkillsSection from "./Skills";
-import MusicContent from "./music/MusicContent";
-import BentoCard from "./BentoCard";
+import { ContactContent } from "../Contact/Contact";
+import SkillsSection from "../Skills/Skills";
+import MusicContent from "../music/MusicContent";
+import BentoCard from "../BentoCard";
 
 const sections = [
   {
@@ -25,7 +25,8 @@ const sections = [
   {
     id: "archive",
     label: "Archive",
-    description: "More about me! See where I've been and the stories that led me here",
+    description:
+      "More about me! See where I've been and the stories that led me here",
     icon: <IconArchive />,
     span: "col-span-2 sm:col-span-2",
   },
@@ -52,12 +53,12 @@ const sections = [
   },
 ];
 
-const contentMap: Record<string, ReactElement> = {
-  archive: <ArchiveContent />,
-  ethos: <Ethos />,
-  music: <MusicContent />,
-  contact: <ContactContent />,
-  skills: <SkillsSection />,
+const contentMap: Record<string, () => React.ReactElement> = {
+  archive: () => <ArchiveContent />,
+  ethos: () => <Ethos />,
+  music: () => <MusicContent />,
+  contact: () => <ContactContent />,
+  skills: () => <SkillsSection />,
 };
 
 export default function AboutMe() {
@@ -104,7 +105,7 @@ export default function AboutMe() {
             </button>
 
             <div className="flex bg-neutral-800 border border-neutral-700 rounded-3xl shadow-2xl overflow-hidden min-h-[400px] sm:min-h-[500px] md:min-h-[550px] p-8 md:p-12 items-center justify-center">
-              {contentMap[activeSection]!}
+              {contentMap[activeSection]?.()}
             </div>
           </div>
         )}
