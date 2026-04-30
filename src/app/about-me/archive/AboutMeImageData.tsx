@@ -87,7 +87,7 @@ export const aboutMeImages: ImageItem[] = [
   },
   {
     id: 2,
-    url: "/about-me/archive/generate-offsite-fall2025.PNG",
+    url: "/about-me/archive/generate-offsite.jpeg",
     title: "Generate Offsite Fall 2025",
     width: 500,
     height: 500,
@@ -125,7 +125,7 @@ export const aboutMeImages: ImageItem[] = [
   },
   {
     id: 5,
-    url: "/about-me/archive/josh-working-kubera.PNG",
+    url: "/about-me/archive/josh-working-kubera.jpeg",
     title: "Office Upgrades: Kubera Health",
     width: 500,
     height: 500,
@@ -135,9 +135,8 @@ export const aboutMeImages: ImageItem[] = [
         <p>
           With a seed round of funding raised, the team at Kubera Health was
           able to get an office upgrade. This time, featuring windows! The
-          location changed, but our caffeine habit didn&apos;t! As you can see in the picture,
-          the coffee cups followed us to our new desks.
-
+          location changed, but our caffeine habit didn&apos;t! As you can see
+          in the picture, the coffee cups followed us to our new desks.
         </p>
       </>
     ),
