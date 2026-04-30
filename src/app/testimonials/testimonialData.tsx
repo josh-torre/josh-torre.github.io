@@ -37,7 +37,7 @@ export const testimonials: TestimonialType[] = [
       {
         image: "testimonials/kubera/matt.jpg",
         name: <>Matt Lefkowitz</>,
-        linkedinURL: "https://www.linkedin.com/company/kubera-health/",
+        linkedinURL: "https://www.linkedin.com/in/matt-lefkowitz-91bb18144/",
       },
       {
         image: "testimonials/kubera/roja.jpg",
@@ -47,12 +47,12 @@ export const testimonials: TestimonialType[] = [
             <br /> MD, MBA
           </>
         ),
-        linkedinURL: "https://www.linkedin.com/company/kubera-health/",
+        linkedinURL: "https://www.linkedin.com/in/rojagarimella/",
       },
       {
         image: "testimonials/kubera/chase.jpg",
         name: <>Chase Robbins</>,
-        linkedinURL: "https://www.linkedin.com/company/kubera-health/",
+        linkedinURL: "https://www.linkedin.com/in/chaserobbins1/",
       },
     ],
     linkedinURL: "https://www.linkedin.com/company/kubera-health/",
