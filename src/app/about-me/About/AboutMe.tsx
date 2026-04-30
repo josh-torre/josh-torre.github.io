@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { SectionHeader } from "../../core-components/SectionHeader";
 import { ArchiveContent } from "../archive/ArchiveContent";
 import { Ethos } from "../Ethos/Ethos";
 import {
@@ -33,7 +34,7 @@ const sections = [
   {
     id: "music",
     label: "Music",
-    description: "What I'm listening to and loving",
+    description: "What I'm listening to",
     icon: <IconBrandSpotify />,
     span: "col-span-2 sm:col-span-1",
   },
@@ -77,9 +78,7 @@ export default function AboutMe() {
   return (
     <section id="about-me" className="px-4">
       <div className="max-w-full md:max-w-[90vw] lg:max-w-[65vw] mx-auto pb-20">
-        <h2 className="text-3xl sm:text-4xl font-medium text-center mb-8 sm:mb-12 text-white">
-          About Me
-        </h2>
+        <SectionHeader label="About Me" title="The person behind the programs" className="mb-8 sm:mb-12" />
 
         {activeSection === null ? (
           <div className="min-h-[400px] sm:min-h-[500px] md:min-h-[550px] flex items-center justify-center">

@@ -22,7 +22,7 @@ export const experiences: Experience[] = [
     company: "Kubera Health",
     location: "New York, NY",
     startDate: "May 2025",
-    endDate: undefined,
+    endDate: "Dec 2025",
     logo: "company-logos/kubera-health.jpg",
     callout: {
       icon: <IconRocket />,
@@ -61,8 +61,8 @@ export const experiences: Experience[] = [
     title: "Software Engineering Intern",
     company: "SPIROL International Corporation",
     location: "Danielson, CT",
-    startDate: "Summers, June 2021",
-    endDate: "August 2024",
+    startDate: "Summers, Jun 2021",
+    endDate: "Aug 2024",
     logo: "company-logos/SPIROL-LOGO.jpg",
     callout: {
       icon: <IconHammer />,
