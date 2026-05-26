@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Experience } from "./experienceTypes";
 
 interface ExperienceCardProps {
@@ -19,9 +20,11 @@ export const ExperienceCard = ({ experience, isLeft }: ExperienceCardProps) => {
       <div className="bg-neutral-800 rounded-2xl p-6 border border-neutral-700 shadow-xl hover:shadow-2xl hover:border-neutral-600 transition-all duration-300">
         <div className="flex items-start gap-4 mb-4">
           <div className="w-16 h-16 bg-neutral-700 rounded-lg flex-shrink-0 overflow-hidden">
-            <img
+            <Image
               src={logo}
               alt={company}
+              width={64}
+              height={64}
               className="w-full h-full object-cover"
               onError={(e) => {
                 e.currentTarget.style.display = "none";

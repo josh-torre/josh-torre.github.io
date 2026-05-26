@@ -1,4 +1,5 @@
 import { IconMail } from "@tabler/icons-react";
+import Image from "next/image";
 import { useState } from "react";
 
 export const ContactContent = () => {
@@ -17,7 +18,7 @@ export const ContactContent = () => {
           href="https://www.linkedin.com/in/joshua-torre/"
           target="_blank"
         >
-          <img
+          <Image
             src={"/socials-logos/linkedin.svg"}
             alt="Linkedin Logo"
             width={60}
@@ -30,7 +31,7 @@ export const ContactContent = () => {
           href="https://github.com/josh-torre"
           target="_blank"
         >
-          <img
+          <Image
             src={"/socials-logos/github-mark-white.svg"}
             alt="Github Logo"
             width={60}

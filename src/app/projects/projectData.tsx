@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const generateIcon = (
   <a href="https://generatenu.com/" target="_blank">
-    <img
+    <Image
       className="object-cover transition-transform duration-500"
       src={"/project-images/generate-wire-frame.svg"}
       alt={"Photos of prisere designs"}

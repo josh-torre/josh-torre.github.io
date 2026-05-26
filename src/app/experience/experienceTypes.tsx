@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
     location: "New York, NY",
     startDate: "May 2025",
     endDate: "Dec 2025",
-    logo: "company-logos/kubera-health.jpg",
+    logo: "/company-logos/kubera-health.jpg",
     callout: {
       icon: <IconRocket />,
       title: "Impact",
@@ -44,7 +44,7 @@ export const experiences: Experience[] = [
     location: "Boston, MA",
     startDate: "Jan 2024",
     endDate: "May 2025",
-    logo: "company-logos/khoury-college-logo.jpg",
+    logo: "/company-logos/khoury-college-logo.jpg",
     callout: {
       icon: <IconUser />,
       title: "Leadership",
@@ -63,7 +63,7 @@ export const experiences: Experience[] = [
     location: "Danielson, CT",
     startDate: "Summers, Jun 2021",
     endDate: "Aug 2024",
-    logo: "company-logos/SPIROL-LOGO.jpg",
+    logo: "/company-logos/SPIROL-LOGO.jpg",
     callout: {
       icon: <IconHammer />,
       title: "Innovation",

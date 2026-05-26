@@ -1,4 +1,5 @@
 import { IconChevronDown } from "@tabler/icons-react";
+import Image from "next/image";
 import { Chip } from "./Chip";
 
 export const HeroSection = () => {
@@ -16,10 +17,13 @@ export const HeroSection = () => {
 
             <div className="relative w-[300px] sm:w-[380px] md:w-[500px] aspect-[50/52] flex items-center justify-center overflow-visible">
               <div className="w-full h-[70%] bg-gradient-to-b from-neutral-600 to-neutral-800 rounded-[32px] absolute z-30 shadow-black shadow-2xl" />
-              <img
-                src="hero-images/grey-josh-headshot.png"
+              <Image
+                src="/hero-images/grey-josh-headshot.png"
                 alt="Josh Torre"
-                className="absolute w-full h-full z-30 object-cover object-bottom rounded-2xl"
+                fill
+                priority
+                sizes="(min-width: 768px) 500px, (min-width: 640px) 380px, 300px"
+                className="z-30 object-cover object-bottom rounded-2xl"
               />
 
               <Chip

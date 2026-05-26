@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Technology {
   name: string;
   file: string;
@@ -58,9 +60,11 @@ export default function SkillsSection() {
                   className="flex flex-col items-center p-3 hover:bg-zinc-900 rounded-lg transition-colors"
                 >
                   <div className="w-16 h-16 mb-2 flex items-center justify-center">
-                    <img
+                    <Image
                       src={`/technology-icons/${icon.file}`}
                       alt={`${icon.name} Logo`}
+                      width={64}
+                      height={64}
                       className="max-w-full max-h-full object-contain"
                     />
                   </div>

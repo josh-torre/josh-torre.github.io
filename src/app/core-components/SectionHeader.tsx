@@ -10,9 +10,11 @@ export const SectionHeader = ({
   className = "mb-12",
 }: SectionHeaderProps) => (
   <div className={`text-center ${className}`}>
-    <p className="text-sm font-extrabold tracking-widest text-neutral-500 uppercase mb-3">
+    <p className="text-xs font-medium tracking-[0.18em] text-white/40 uppercase mb-3">
       {label}
     </p>
-    <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+    <h2 className="text-3xl md:text-4xl font-semibold tracking-[-0.01em] text-white">
+      {title}
+    </h2>
   </div>
 );
